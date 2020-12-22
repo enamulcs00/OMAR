@@ -30,7 +30,7 @@ export class DeviceVisitsComponent implements AfterViewInit {
         // or hide: ['data1', 'data2']
       },
       color: {
-        pattern: ['#4798e8', '#ff7676', '#f6f6f6']
+        pattern: ['#fbb03b', '#666666', '#f6f6f6']
       }
     });
   }

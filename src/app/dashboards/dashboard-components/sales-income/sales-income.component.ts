@@ -48,7 +48,7 @@ export class SalesIncomeComponent implements AfterViewInit {
         height: 270
       },
       color: {
-        pattern: ['#4798e8', '#ccc']
+        pattern: ['#fbb03b', '#ccc']
       }
     });
 
@@ -75,7 +75,7 @@ export class SalesIncomeComponent implements AfterViewInit {
         // or hide: ['data1', 'data2']
       },
       color: {
-        pattern: ['#ffffff', '#4798e8', '#24d2b5', '#20aee3']
+        pattern: ['#ffffff', '#fbb03b', '#24d2b5', '#20aee3']
       }
     });
     // ==============================================================

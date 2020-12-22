@@ -8,20 +8,21 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-12  text-right">
-            <button class="btn btn-primary mb-2">Export CSV</button>
-          </div>
+            <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
+            <button class="btn btn-seconadary mb-2"><i class="sl-icon-plus"></i> Add User</button>
         </div>
-        <div class="">
+        <div class="table-responsive">
           <table class="table v-middle product-overview" id="zero_config">
             <thead>
               <tr>
                 <th>Photo</th>
                 <th>Name</th>
-                <th>ID Proof</th>
-                <th>Ride Date</th>
-                <th>Ride Type</th>
-                <th>Bike Health</th>
-                <th>User Permission</th>
+                <th>Email ID</th>
+                <th>Gender</th>
+                <th>Contact</th>
+                <th>Bike Name</th>
+                <th>Bike No</th>
+                <th>Address</th>               
                 <th>User Status</th>
                 <th>Action</th>
               </tr>
@@ -32,14 +33,14 @@
                   <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
                 </td>
                 <td>Ronny </td>
-                <td><a href="javascript:void(0)" class="text-inverse p-r-10" title="ID Proof"
-                    (click)="openWindowCustomClass(content3)">
-                    <img src="assets/images/gallery/driving-licence.jpg" alt="iMac" width="60" class="">
-                  </a></td>
-                <td>10-7-2020</td>
-                <td>Tour</td>
-                <td>20</td>
-                <td><span class="label-warning pl-1 pr-1 text-white">Pending</span></td>
+                <td>example@gmail.com</td>
+                <td>Male</td>
+                <td><span class="text-nowrap">+91-7858485474</span></td>
+                <td>Pulsar</td>
+                <td><span class="text-nowrap">HR-04-V-2433</span></td>
+                <td><span class="text-nowrap">+91-7858485474</span></td>
+                <td><span class="text-nowrap">3750  Grove Avenue,</span> Clinton</td>
+                
                 <td>
                   <div class="form-check">
                     <div class="custom-control custom-radio">
@@ -50,11 +51,12 @@
                   </div>
                 </td>
                 <td>
-                  <div ngbDropdown placement="bottom" class="d-inline-block">
+                  <div ngbDropdown placement="bottom" class="d-inline-block" >
                     <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
                       Action
                     </button>
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                   
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
                       <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
                       </button>
                       <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
@@ -64,91 +66,10 @@
                         Delete</button>  
                     </div>
                   </div>
+                  
                  
                 </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="assets/images/gallery/user.jpg" alt="iMac" width="60" class="rounded-circle">
-                </td>
-                <td>Andrew</td>
-                <td><a href="javascript:void(0)" class="text-inverse p-r-10" title="ID Proof"
-                    (click)="openWindowCustomClass(content3)">
-                    <img src="assets/images/gallery/driving-licence.jpg" alt="iMac" width="60" class="">
-                  </a></td>
-                <td>10-7-2020</td>
-                <td>Tour</td>
-                <td>80</td>
-                <td><span class="label-warning pl-1 pr-1 text-white">Pending</span></td>
-                <td>
-                  <div class="form-check">
-                    <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="customControlValidation"
-                        name="radio-stacked1" checked disabled>
-                      <label class="custom-control-label" for="customControlValidation">Active</label>
-                    </div>
-                  </div>
-                </td>
-                <td>
-
-                  <div ngbDropdown placement="bottom" class="d-inline-block">
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                      Action
-                    </button>
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                      <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
-                      </button>
-                      <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                          class="ti-marker-alt"></i> Edit</button>
-                      
-                      <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
-                        Delete</button>  
-                    </div>
-                  </div>
-
-
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="assets/images/users/1.jpg" alt="iMac" width="60" class="rounded-circle">
-                </td>
-                <td>Liza</td>
-                <td><a href="javascript:void(0)" class="text-inverse p-r-10" title="ID Proof"
-                    (click)="openWindowCustomClass(content3)">
-                    <img src="assets/images/gallery/driving-licence.jpg" alt="iMac" width="60" class="">
-                  </a></td>
-                <td>10-7-2020</td>
-                <td>Tour</td>
-                <td>60</td>
-                <td><span class="label-success pl-1 pr-1 text-white">Accepted</span></td>
-                <td>
-                  <div class="form-check">
-                    <div class="custom-control custom-radio">
-                      <input type="radio" class="custom-control-input" id="customControlValidation2"
-                        name="radio-stacked" checked disabled>
-                      <label class="custom-control-label" for="customControlValidation2">Active</label>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div ngbDropdown placement="bottom" class="d-inline-block">
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                      Action
-                    </button>
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                      <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
-                      </button>
-                      <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                          class="ti-marker-alt"></i> Edit</button>
-                      
-                      <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
-                        Delete</button>  
-                    </div>
-                  </div>
-                </td>
-              </tr>
-
+              </tr>     
             </tbody>
           </table>
         </div>

@@ -112,7 +112,7 @@ export class AnalyticsComponent implements OnInit {
               hide: false
           },
           color: {
-              pattern: ['#4798e8']
+              pattern: ['#fbb03b']
           }
       });
       const chart = c3.generate({
@@ -154,7 +154,7 @@ export class AnalyticsComponent implements OnInit {
           height: 270
         },
         color: {
-          pattern: ['#4798e8', '#ccc']
+          pattern: ['#fbb03b', '#ccc']
         }
       });
     
@@ -181,7 +181,7 @@ export class AnalyticsComponent implements OnInit {
           // or hide: ['data1', 'data2']
         },
         color: {
-          pattern: ['#ffffff', '#4798e8', '#24d2b5', '#20aee3']
+          pattern: ['#ffffff', '#fbb03b', '#24d2b5', '#20aee3']
         }
       });
       // ==============================================================
@@ -265,7 +265,7 @@ public barChartLabels1: string[] = [
   'Sat',
 ];
 public barChartColors1: Array<any> = [
-  { backgroundColor: '#4798e8' }
+  { backgroundColor: '#fbb03b' }
 ];
 
 

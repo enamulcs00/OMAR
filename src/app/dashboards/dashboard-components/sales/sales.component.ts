@@ -107,7 +107,7 @@ export class SalesComponent implements AfterViewInit {
                 hide: false
             },
             color: {
-                pattern: ['#4798e8']
+                pattern: ['#fbb03b']
             }
         });
     }
@@ -164,6 +164,6 @@ public barChartLabels1: string[] = [
     'Sat',
   ];
   public barChartColors1: Array<any> = [
-    { backgroundColor: '#4798e8' }
+    { backgroundColor: '#fbb03b' }
   ];
 }

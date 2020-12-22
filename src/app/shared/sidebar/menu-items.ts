@@ -598,6 +598,14 @@ export const ROUTES: RouteInfo[] = [
     //     submenu: []
     // },
     {
+        path: '/pages/users',
+        title: 'Users',
+        icon: 'sl-icon-user',
+        class: '', 
+        extralink: false,
+        submenu: []
+    },
+    {
         path: '/pages/bikes',
         title: 'Bikes',
         icon: 'mdi mdi-bike',
@@ -614,14 +622,7 @@ export const ROUTES: RouteInfo[] = [
         extralink: false,
         submenu: []
     },
-    {
-        path: '/pages/users',
-        title: 'Users',
-        icon: 'sl-icon-user',
-        class: '', 
-        extralink: false,
-        submenu: []
-    },
+  
     {
         path: '/pages/destination',
         title: 'Destination',

@@ -127,7 +127,7 @@ export class MixstatsComponent implements AfterViewInit {
         // or hide: ['data1', 'data2']
       },
       color: {
-        pattern: ['#4798e8', '#01c0c8', '#f6f6f6']
+        pattern: ['#fbb03b', '#01c0c8', '#f6f6f6']
       }
     });
     // ==============================================================
@@ -173,7 +173,7 @@ export class MixstatsComponent implements AfterViewInit {
         height: 300
       },
       color: {
-        pattern: ['#4798e8', '#01c0c8']
+        pattern: ['#fbb03b', '#01c0c8']
       }
     });
   }
