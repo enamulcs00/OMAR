@@ -9,7 +9,7 @@
         <div class="row">
           <div class="col-md-12  text-right">
             <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
-            <button class="btn btn-seconadary mb-2"><i class="sl-icon-plus"></i> Add User</button>
+            <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add User</button>
         </div>
         <div class="table-responsive">
           <table class="table v-middle product-overview" id="zero_config">
@@ -38,7 +38,47 @@
                 <td><span class="text-nowrap">+91-7858485474</span></td>
                 <td>Pulsar</td>
                 <td><span class="text-nowrap">HR-04-V-2433</span></td>
+                <td><span class="text-nowrap">3750  Grove Avenue,</span> Clinton</td>
+                
+                <td>
+                  <div class="form-check">
+                    <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="customControlValidation2"
+                        name="radio-stacked"  disabled>
+                      <label class="custom-control-label" for="customControlValidation2">Inactive</label>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div ngbDropdown placement="bottom" class="d-inline-block" >
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                      Action
+                    </button>
+                   
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
+                      <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
+                      </button>
+                      <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
+                          class="ti-marker-alt"></i> Edit</button>
+                      
+                      <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
+                        Delete</button>  
+                    </div>
+                  </div>
+                  
+                 
+                </td>
+              </tr>     
+              <tr>
+                <td>
+                  <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
+                </td>
+                <td>Ronny </td>
+                <td>example@gmail.com</td>
+                <td>Male</td>
                 <td><span class="text-nowrap">+91-7858485474</span></td>
+                <td>Pulsar</td>
+                <td><span class="text-nowrap">HR-04-V-2433</span></td>
                 <td><span class="text-nowrap">3750  Grove Avenue,</span> Clinton</td>
                 
                 <td>
@@ -114,12 +154,7 @@
               <img src="assets/images/users/5.jpg" class="rounded-circle" width="120" />
               <h4 class="card-title m-t-10">Hanna Gover</h4>
             </div>
-
           </div>
-          <div class="m-t-10 text-center">
-            <img src="assets/images/users/qr.jpg" class="" width="150" />
-          </div>
-
         </div>
       </div>
       <!-- Column -->
@@ -136,62 +171,41 @@
                     <div class="col-md-6">
                       <ul class="list-block">
                         <li class="list-block-listing">Name: <span class="font-weight-600">Hanna Gover</span></li>
-                        <li class="list-block-listing">Start Ride Date: <span class="font-weight-600">19-8-2020</span>
+                        <li class="list-block-listing">Email: <span class="font-weight-600">Hannagover@gmail.com</span>
                         </li>
-                        <li class="list-block-listing">End Ride Date: <span class="font-weight-600">21-8-2020</span>
+                        <li class="list-block-listing">Gender: <span class="font-weight-600">Female</span>
                         </li>
-                        <li class="list-block-listing">Ride Type: <span class="font-weight-600">Tour</span></li>
-                        <li class="list-block-listing">Bike Id: <span>#33434323</span></li>
-                        <li class="list-block-listing">Bike Battery: <span>50%</span></li>
+                        <li class="list-block-listing">Phone No: <span class="font-weight-600">+91-7858485474</span>
+                        </li>                
+                        <li class="list-block-listing "> <span>Address: </span> <span class="font-weight-600">3750 Grove Avenue, Clinton</span>
+                        </li>
 
 
                       </ul>
                     </div>
                     <div class="col-md-6">
                       <ul class="list-block">
-                        <li class="list-block-listing">Email: <span class="font-weight-600">Hannagover@gmail.com</span>
-                        </li>
-                        <li class="list-block-listing">Start Time: <span class="font-weight-600">8:30 AM</span></li>
-                        <li class="list-block-listing ">Emd Time: <span class="font-weight-600">7:00 PM</span></li>
-                        <li class="list-block-listing "> <span>Total Ride:</span> <span class="font-weight-600">20
-                            KM</span></li>
-                        <li class="list-block-listing">Total Billing: <span class="font-weight-600">$250</span></li>
-                        <li class="list-block-listing">Ride Status: <span
-                            class="label label-success font-weight-100">Finished</span></li>
-
+                       
+                        <li class="list-block-listing">Total Bike: <span class="font-weight-600">1</span></li>
+                        <li class="list-block-listing">Bike Name: <span>Pulsar </span></li>
+                        <li class="list-block-listing">Bike No: <span>HR-04-V-2433</span></li>                       
+                        <li class="list-block-listing">Vendor Name: <span class="font-weight-600">John</span></li>
                       </ul>
-                    </div>
-                  </div>
-                  <div class="map-box">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470029.1604841957!2d72.29955005258641!3d23.019996818380896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C+Gujarat!5e0!3m2!1sen!2sin!4v1493204785508"
-                      width="100%" height="150" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>   
                   </div>
                 </ng-template>
               </ngb-tab>
-              <ngb-tab>
-                <ng-template ngbTabTitle><b>User Document</b></ng-template>
-                <ng-template ngbTabContent>
-                  <div class="row mt-3">
-                    <div class="col-md-6">
-                      <figure class=""><img src="assets/images/gallery/driving-licence.jpg" class="img-fluid"></figure>
-                    </div>
-                    <div class="col-md-6">
-                      <figure class=""><img src="assets/images/gallery/driving-licence.jpg" class="img-fluid"></figure>
-                    </div>
-                  </div>
-                </ng-template>
-              </ngb-tab>
+             
               <ngb-tab>
                 <ng-template ngbTabTitle><b>User History</b></ng-template>
                 <ng-template ngbTabContent>
                   <ul class="user_history pl-0">
-                    <li class="user_history_list"><span class="user_history_list_icon"><i
+                    <li class="user_history_list"><span class="user_history_list_icon active"><i
                           class="mdi mdi-map-marker"></i></span> <span>Location 1</span> </li>
-                    <li class="user_history_list"><span class="user_history_list_icon"><i
+                    <li class="user_history_list"><span class="user_history_list_icon active"><i
                           class="mdi mdi-map-marker"></i></span> <span>Location 2</span> </li>
-                    <li class="user_history_list skip"><span class="user_history_list_icon"><i
-                          class="mdi mdi-map-marker"></i></span> <span class="text-decoration-line">Location 3</span>
+                    <li class="user_history_list skip"><span class="user_history_list_icon active"><i
+                          class="mdi mdi-map-marker"></i></span>Location 3
                     </li>
                     <li class="user_history_list"><span class="user_history_list_icon"><i
                           class="mdi mdi-map-marker"></i></span> <span>Location 4</span> </li>
@@ -232,7 +246,7 @@
             <div class="row p-t-20">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="control-label">Name</label>
+                  <label class="control-label">User Name</label>
                   <input type="text" id="firstName" class="form-control" placeholder="John doe">
 
                 </div>
@@ -240,22 +254,11 @@
               <!--/span-->
               <div class="col-md-6">
                 <div class="form-group has-success">
-                  <label class="control-label">Bike Battery</label>
-                  <select class="form-control custom-select">
-                    <option value="">10%</option>
-                    <option value="">20%</option>
-                    <option value="">30%</option>
-                    <option value="">40%</option>
-                    <option value="">50%</option>
-                    <option value="">60%</option>
-                    <option value="">70%</option>
-                    <option value="">80%</option>
-                    <option value="">90%</option>
-                    <option value="">100%</option>
-                  </select>
-
+                  <div class="form-group">
+                    <label class="control-label">Upload User Profile</label>                    
+                    <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
+                  </div>
                 </div>
-
               </div>
               <!--/span-->
             </div>
@@ -283,16 +286,19 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group has-danger">
-                  <label class="control-label">Start Ride Date</label>
-                  <input type="date" id="lastName" class="form-control form-control-danger" placeholder="12/12/2020">
+                  <label class="control-label">Address</label>
+                  <input type="text" id="Address" class="form-control form-control-danger" placeholder="Address">
 
                 </div>
               </div>
               <!--/span-->
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="control-label">End Ride Date</label>
-                  <input type="date" class="form-control">
+                  <label class="control-label">Gender</label>
+                  <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                    <option value="Category 1">Male</option>
+                    <option value="Category 2">Female</option>
+                  </select>
                 </div>
               </div>
               <!--/span-->
@@ -301,11 +307,15 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="control-label">Ride Type</label>
-                  <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
-                    <option value="Category 1">Tour</option>
-                    <option value="Category 2">Destination</option>
-                  </select>
+                  <label class="control-label">Bike Name</label>
+                  <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Bike No</label>
+                  <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
                 </div>
               </div>
               <!--/span-->
@@ -324,17 +334,6 @@
                 
               </div>
               <!--/span-->
-              <div class="col-md-6">
-              <div class="form-group">
-                <label class="control-label">User Permission</label>
-                <select class="form-control custom-select">
-                    <option value="">User Permission</option>
-                    <option value="">Accepted</option>
-                    <option value="">Pending</option>
-                    <option value="">Rejected</option>
-                </select>
-              </div>
-            </div>
             </div>
             <!--/row-->
           </div>
@@ -343,6 +342,122 @@
             <div class="card-body">
               <button type="submit" class="btn btn-success mr-3" (click)="modal.dismiss('Cross click')">
                 <i class="fa fa-check"></i> Update</button>
+              <button type="button" class="btn btn-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</ng-template>
+
+<!-- add user -->
+<ng-template #addUser let-modal>
+  <div class="modal-body">
+    <div class="card">
+      <form action="#">
+        <div class="form-body">
+          <div class="card-body">
+            <div class="row p-t-20">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">User Name</label>
+                  <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group has-success">
+                  <div class="form-group">
+                    <label class="control-label">Upload User Profile</label>                    
+                    <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
+                  </div>
+                </div>
+              </div>
+              <!--/span-->
+            </div>
+            <!--/row-->
+            <div class="row ">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Contact No</label>
+                  <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group has-danger">
+                  <label class="control-label">Email</label>
+                  <input type="email" id="email" class="form-control form-control-danger"
+                    placeholder="example@gmail.com">
+
+                </div>
+              </div>
+              <!--/span-->
+            </div>
+            <!--/row-->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group has-danger">
+                  <label class="control-label">Address</label>
+                  <input type="text" id="Address" class="form-control form-control-danger" placeholder="Address">
+
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Gender</label>
+                  <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                    <option value="Category 1">Male</option>
+                    <option value="Category 2">Female</option>
+                  </select>
+                </div>
+              </div>
+              <!--/span-->
+            </div>
+            <!--/row-->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Bike Name</label>
+                  <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Bike No</label>
+                  <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">User Status</label>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio1">Active</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio2">Inactive</label>
+                  </div>
+                </div>
+                
+              </div>
+              <!--/span-->
+            </div>
+            <!--/row-->
+          </div>
+
+          <div class="form-actions">
+            <div class="card-body">
+              <button type="submit" class="btn btn-success mr-3" (click)="modal.dismiss('Cross click')">
+                <i class="fa fa-check"></i> Add</button>
               <button type="button" class="btn btn-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
             </div>
           </div>

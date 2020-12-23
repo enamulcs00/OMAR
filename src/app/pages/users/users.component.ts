@@ -28,9 +28,12 @@ userprofileModal(userDelete) {
 }
 userDeleteModal(userDelete) {
   this.modalService.open(userDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
-}userDetail
+}
 userDetailModal(userDetail) {
   this.modalService.open(userDetail, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
+}
+addUserModal(addUser) {
+  this.modalService.open(addUser, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
 }
 private getDismissReason(reason: any): string {
   if (reason === ModalDismissReasons.ESC) {
