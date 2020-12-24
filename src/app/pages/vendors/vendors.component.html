@@ -1,0 +1,461 @@
+<div class="row">
+  <!-- Column -->
+
+
+  <div class="col-lg-12">
+    <div class="card">
+
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-12  text-right">
+            <div ngbDropdown class="d-inline-block mb-2">
+              <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                Daily
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button class="dropdown-item">Daily</button>
+                <button class="dropdown-item">Weekly</button>
+                <button class="dropdown-item">Monthly</button>
+                <button class="dropdown-item">Yearly</button>
+              </div>
+            </div>
+            <!-- <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button> -->
+            <!-- <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add Vendor</button> -->
+          </div>
+          <div class="table-responsive">
+            <table class="table v-middle product-overview" id="zero_config">
+              <thead>
+                <tr>
+                  <th>Photo</th>
+                  <th>Name</th>
+                  <th>Email ID</th>
+                  <th>Gender</th>
+                  <th>Contact</th>
+                  <th>Address</th>
+                  <th>Online Hours</th>
+                  <th>Order Status</th>
+                  <th>Total Stock</th>
+                  <th>Availble Stock</th>
+                  <th>Booked Stock</th>
+                  <th>Total Revenue</th>
+                  <th>User Request</th>
+                  <th>Deliver Time</th>
+                  <th>Vendor Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
+                  </td>
+                  <td>Ronny </td>
+                  <td>example@gmail.com</td>
+                  <td>Male</td>
+                  <td><span class="text-nowrap">+91-7858485474</span></td>                 
+                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td>
+                  <td>3/Hrs</td>
+
+                  <td>
+                    <button type="button" class="btn btn-outline-danger "
+                      ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                      Cancel
+                    </button>
+                  </td>
+                  <td>40</td>
+                  <td>30</td>
+                  <td>10</td>
+                  <td>$ 410</td>
+                  <td>8:40 AM</td>
+                  <td>
+                    <div class="form-check">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation2"
+                          name="radio-stacked" disabled>
+                        <label class="custom-control-label" for="customControlValidation2">Inactive</label>
+                      </div>
+                    </div>
+                  </td>
+
+
+                  <td>
+                    <div ngbDropdown placement="bottom" class="d-inline-block">
+                      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                        Action
+                      </button>
+
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
+                        <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i>
+                          View
+                        </button>
+                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
+                            class="ti-marker-alt"></i> Edit</button>
+
+                        <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
+                          Delete</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Column -->
+  </div>
+
+  <ng-template #content3 let-modal>
+    <div class="modal-header p-2">
+      <h4 class="modal-title">Driving Licence</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-md-6">
+          <figure class=""><img src="assets/images/gallery/driving-licence.jpg" class="img-fluid"></figure>
+        </div>
+        <div class="col-md-6">
+          <figure class=""><img src="assets/images/gallery/driving-licence.jpg" class="img-fluid"></figure>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+
+  <!-- view modal -->
+  <ng-template #userprofile let-modal>
+    <div class="modal-body">
+      <button type="button" class=" close-icon" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <i class="mdi mdi-close"></i>
+      </button>
+      <div class="row">
+        <!-- Column -->
+        <div class="col-lg-3 col-xlg-3 col-md-5">
+          <div class="card">
+            <div class="card-body">
+              <div class="m-t-30 text-center">
+                <img src="assets/images/users/5.jpg" class="rounded-circle" width="120" />
+                <h4 class="card-title m-t-10">Hanna Gover</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Column -->
+        <!-- Column -->
+        <div class="col-lg-9 col-xlg-9 col-md-7">
+          <div class="card custom-tabs mb-0">
+            <div class="card-body">
+              <div class="col-md-12 text-right"><button class="btn btn-primary">Export CSV</button></div>
+              <ngb-tabset>
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>User Detail</b></ng-template>
+                  <ng-template ngbTabContent>
+                    <div class="row pt-2">
+                      <div class="col-md-6">
+                        <ul class="list-block">
+                          <li class="list-block-listing">Name: <span class="font-weight-600">Hanna Gover</span></li>
+                          <li class="list-block-listing">Email: <span
+                              class="font-weight-600">Hannagover@gmail.com</span>
+                          </li>
+                          <li class="list-block-listing">Gender: <span class="font-weight-600">Female</span>
+                          </li>
+                          <li class="list-block-listing">Phone No: <span class="font-weight-600">+91-7858485474</span>
+                          </li>
+                          <li class="list-block-listing "> <span>Address: </span> <span class="font-weight-600">3750
+                              Grove Avenue, Clinton</span>
+                          </li>
+
+
+                        </ul>
+                      </div>
+                      <div class="col-md-6">
+                        <ul class="list-block">
+
+                          <li class="list-block-listing">Total Bike: <span class="font-weight-600">1</span></li>
+                          <li class="list-block-listing">Bike Name: <span>Pulsar </span></li>
+                          <li class="list-block-listing">Bike No: <span>HR-04-V-2433</span></li>
+                          <li class="list-block-listing">Vendor Name: <span class="font-weight-600">John</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </ng-template>
+                </ngb-tab>
+
+                <ngb-tab>
+                  <ng-template ngbTabTitle><b>User History</b></ng-template>
+                  <ng-template ngbTabContent>
+                    <ul class="user_history pl-0">
+                      <li class="user_history_list"><span class="user_history_list_icon active"><i
+                            class="mdi mdi-map-marker"></i></span> <span>Location 1</span> </li>
+                      <li class="user_history_list"><span class="user_history_list_icon active"><i
+                            class="mdi mdi-map-marker"></i></span> <span>Location 2</span> </li>
+                      <li class="user_history_list skip"><span class="user_history_list_icon active"><i
+                            class="mdi mdi-map-marker"></i></span>Location 3
+                      </li>
+                      <li class="user_history_list"><span class="user_history_list_icon"><i
+                            class="mdi mdi-map-marker"></i></span> <span>Location 4</span> </li>
+                      <li class="user_history_list"><span class="user_history_list_icon"><i
+                            class="mdi mdi-map-marker"></i></span> <span>Location 5</span> </li>
+                    </ul>
+                  </ng-template>
+                </ngb-tab>
+              </ngb-tabset>
+            </div>
+          </div>
+        </div>
+        <!-- Column -->
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- delete modal -->
+  <ng-template #userDelete let-modal>
+    <div class="modal-body">
+      <p>Are You Sure want to delete this user?</p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary mr-2" aria-label="Close"
+          (click)="modal.dismiss('Cross click')">Yes</button>
+        <button type="button" class="btn btn-seconadary" aria-label="Close"
+          (click)="modal.dismiss('Cross click')">No</button>
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- edit user detail -->
+  <ng-template #userDetail let-modal>
+    <div class="modal-body">
+      <div class="card">
+        <form action="#">
+          <div class="form-body">
+            <div class="card-body">
+              <div class="row p-t-20">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Vendor Name</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group has-success">
+                    <div class="form-group">
+                      <label class="control-label">Upload Vendor Profile</label>
+                      <div class="custom-file"><input class="custom-file-input" id="inputGroupFile01" type="file"><label
+                          class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
+                    </div>
+                  </div>
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+              <div class="row ">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Contact No</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group has-danger">
+                    <label class="control-label">Email</label>
+                    <input type="email" id="email" class="form-control form-control-danger"
+                      placeholder="example@gmail.com">
+
+                  </div>
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group has-danger">
+                    <label class="control-label">Address</label>
+                    <input type="text" id="Address" class="form-control form-control-danger" placeholder="Address">
+
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Gender</label>
+                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                      <option value="Category 1">Male</option>
+                      <option value="Category 2">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Bike Name</label>
+                    <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Bike No</label>
+                    <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Vendor Status</label>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio1">Active</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio2">Inactive</label>
+                    </div>
+                  </div>
+
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+            </div>
+
+            <div class="form-actions">
+              <div class="card-body">
+                <button type="submit" class="btn btn-success mr-3" (click)="modal.dismiss('Cross click')">
+                  <i class="fa fa-check"></i> Update</button>
+                <button type="button" class="btn btn-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </ng-template>
+
+  <!-- add user -->
+  <ng-template #addUser let-modal>
+    <div class="modal-body">
+      <div class="card">
+        <form action="#">
+          <div class="form-body">
+            <div class="card-body">
+              <div class="row p-t-20">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Vendor Name</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group has-success">
+                    <div class="form-group">
+                      <label class="control-label">Upload Vendor Profile</label>
+                      <div class="custom-file"><input class="custom-file-input" id="inputGroupFile01" type="file"><label
+                          class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
+                    </div>
+                  </div>
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+              <div class="row ">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Contact No</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group has-danger">
+                    <label class="control-label">Email</label>
+                    <input type="email" id="email" class="form-control form-control-danger"
+                      placeholder="example@gmail.com">
+
+                  </div>
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group has-danger">
+                    <label class="control-label">Address</label>
+                    <input type="text" id="Address" class="form-control form-control-danger" placeholder="Address">
+
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Gender</label>
+                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                      <option value="Category 1">Male</option>
+                      <option value="Category 2">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Bike Name</label>
+                    <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Bike No</label>
+                    <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
+                  </div>
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Vendor Status</label>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio1">Active</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadio2">Inactive</label>
+                    </div>
+                  </div>
+
+                </div>
+                <!--/span-->
+              </div>
+              <!--/row-->
+            </div>
+
+            <div class="form-actions">
+              <div class="card-body">
+                <button type="submit" class="btn btn-success mr-3" (click)="modal.dismiss('Cross click')">
+                  <i class="fa fa-check"></i> Add</button>
+                <button type="button" class="btn btn-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </ng-template>

@@ -17,6 +17,8 @@ import { AboutComponent } from './about/about.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotificationComponent } from './notification/notification.component';
+import { VendorsComponent } from './vendors/vendors.component';
+import { EventsComponent } from './events/events.component';
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
 
@@ -41,8 +43,30 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Users',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
+            { title: 'Dashboard', url: '/dashboard' }, 
             { title: 'Users' }
+          ]
+        }
+      },
+      {
+        path: 'vendors',
+        component: VendorsComponent,
+        data: {
+          title: 'Vendors',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Vendors' }
+          ]
+        }
+      },
+      {
+        path: 'events',
+        component: EventsComponent,
+        data: {
+          title: 'Events',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Events' }
           ]
         }
       },

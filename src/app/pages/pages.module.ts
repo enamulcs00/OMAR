@@ -29,6 +29,8 @@ import { ChartsModule } from 'ng2-charts';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NotificationComponent } from './notification/notification.component';
+import { VendorsComponent } from './vendors/vendors.component';
+import { EventsComponent } from './events/events.component';
 
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
@@ -64,7 +66,9 @@ CommonModule,
     AboutComponent,
     ContactComponent,
     FaqComponent,
-    NotificationComponent
+    NotificationComponent,
+    VendorsComponent,
+    EventsComponent
   ]
 })
 export class PagesModule {}

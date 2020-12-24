@@ -606,6 +606,22 @@ export const ROUTES: RouteInfo[] = [
         submenu: []
     },
     {
+        path: '/pages/vendors',
+        title: 'Vendors',
+        icon: 'sl-icon-user',
+        class: '', 
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/events',
+        title: 'Events',
+        icon: 'mdi mdi-calendar-text',
+        class: '', 
+        extralink: false,
+        submenu: []
+    },
+    {
         path: '/pages/bikes',
         title: 'Bikes',
         icon: 'mdi mdi-bike',
@@ -614,31 +630,31 @@ export const ROUTES: RouteInfo[] = [
         submenu: []
     },
 
-    {
-        path: '/pages/tours',
-        title: 'Tours',
-        icon: 'sl-icon-globe',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
+    // {
+    //     path: '/pages/tours',
+    //     title: 'Tours',
+    //     icon: 'sl-icon-globe',
+    //     class: '',
+    //     extralink: false,
+    //     submenu: []
+    // },
   
-    {
-        path: '/pages/destination',
-        title: 'Destination',
-        icon: 'sl-icon-map',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/pages/hotels',
-        title: 'Hotels',
-        icon: 'mdi mdi-hospital-building',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
+    // {
+    //     path: '/pages/destination',
+    //     title: 'Destination',
+    //     icon: 'sl-icon-map',
+    //     class: '',
+    //     extralink: false,
+    //     submenu: []
+    // },
+    // {
+    //     path: '/pages/hotels',
+    //     title: 'Hotels',
+    //     icon: 'mdi mdi-hospital-building',
+    //     class: '',
+    //     extralink: false,
+    //     submenu: []
+    // },
     {
         path: '/pages/revenue',
         title: 'Revenue',
@@ -655,14 +671,14 @@ export const ROUTES: RouteInfo[] = [
         extralink: false,
         submenu: []
     },
-    {
-        path: '/pages/calculator',
-        title: 'Calculator',
-        icon: 'mdi mdi-calculator',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
+    // {
+    //     path: '/pages/calculator',
+    //     title: 'Calculator',
+    //     icon: 'mdi mdi-calculator',
+    //     class: '',
+    //     extralink: false,
+    //     submenu: []
+    // },
     {
         path: '/pages/notification',
         title: 'Brodcast Notification',
@@ -671,47 +687,47 @@ export const ROUTES: RouteInfo[] = [
         extralink: false,
         submenu: []
     },
-    {
-        path: '/pages/analytics',
-        title: 'Analytics',
-        icon: 'mdi mdi-chart-arc',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
-     {
-        path: '',
-        title: 'CMS Pages',
-        icon: 'icon-Car-Wheel',
-        class: 'has-arrow',
-        extralink: false,
-        submenu: [
-            {
-                            path: '/pages/about',
-                            title: 'About',
-                            icon: '',
-                            class: '',
-                            extralink: false,
-                            submenu: []
-            },
-            {
-                path: '/pages/contact',
-                title: 'Contact',
-                icon: '',
-                class: '',
-                extralink: false,
-                submenu: []
-        },
-        {
-            path: '/pages/faq',
-            title: 'Faq',
-            icon: '',
-            class: '',
-            extralink: false,
-            submenu: []
-},
-        ]
-    },
+//     {
+//         path: '/pages/analytics',
+//         title: 'Analytics',
+//         icon: 'mdi mdi-chart-arc',
+//         class: '',
+//         extralink: false,
+//         submenu: []
+//     },
+//      {
+//         path: '',
+//         title: 'CMS Pages',
+//         icon: 'icon-Car-Wheel',
+//         class: 'has-arrow',
+//         extralink: false,
+//         submenu: [
+//             {
+//                             path: '/pages/about',
+//                             title: 'About',
+//                             icon: '',
+//                             class: '',
+//                             extralink: false,
+//                             submenu: []
+//             },
+//             {
+//                 path: '/pages/contact',
+//                 title: 'Contact',
+//                 icon: '',
+//                 class: '',
+//                 extralink: false,
+//                 submenu: []
+//         },
+//         {
+//             path: '/pages/faq',
+//             title: 'Faq',
+//             icon: '',
+//             class: '',
+//             extralink: false,
+//             submenu: []
+// },
+//         ]
+//     },
   
     // {
     //     path: '',

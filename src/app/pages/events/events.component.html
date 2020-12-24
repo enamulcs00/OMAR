@@ -1,0 +1,144 @@
+<div class="card">
+    <div class="card-body">
+<ngb-tabset type="pills"> 
+    <ngb-tab>
+        <ng-template ngbTabTitle><b>Running Events</b></ng-template>
+      <ng-template ngbTabContent>
+        <div class="row">
+            <!-- <div class="col-md-12  text-right">
+              <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
+              <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add User</button>
+          </div> -->
+          <div ngbDropdown class="d-inline-block mb-2 ml-auto mt-2">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+              Daily
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">Daily</button>
+              <button class="dropdown-item">Weekly</button>
+              <button class="dropdown-item">Monthly</button>
+              <button class="dropdown-item">Yearly</button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table v-middle product-overview" id="zero_config">
+              <thead>
+                <tr>
+                  <!-- <th>Photo</th> -->
+                  <th>Event Name</th>
+                  <th>Event Organizer</th>
+                  <th>Gender</th>
+                  <th>Timing</th>
+                  <th>Status</th>
+                  <th>Users</th>
+                  <th>Address</th>               
+                  <th>User Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <!-- <td>
+                    <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
+                  </td> -->
+                  <td>Ronny </td>
+                  <td>example@gmail.com</td>
+                  <td>Male</td>
+                  <td><span class="text-nowrap">+91-7858485474</span></td>
+                  <td>Pulsar</td>
+                  <td><span class="text-nowrap">HR-04-V-2433</span></td>
+                  <td><span class="text-nowrap">3750  Grove Avenue,</span> Clinton</td>
+                  
+                  <td>
+                    <div class="form-check">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation2"
+                          name="radio-stacked"  disabled>
+                        <label class="custom-control-label" for="customControlValidation2">Inactive</label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div ngbDropdown placement="bottom" class="d-inline-block" >
+                      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                        Action
+                      </button>
+                     
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
+                        <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
+                        </button>
+                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
+                            class="ti-marker-alt"></i> Edit</button>
+                        
+                        <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
+                          Delete</button>  
+                      </div>
+                    </div>
+                    
+                   
+                  </td>
+                </tr>     
+                <tr>
+                  <td>
+                    <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
+                  </td>
+                  <td>Ronny </td>
+                  <td>example@gmail.com</td>
+                  <td>Male</td>
+                  <td><span class="text-nowrap">+91-7858485474</span></td>
+                  <td>Pulsar</td>
+                  <td><span class="text-nowrap">HR-04-V-2433</span></td>
+                  <td><span class="text-nowrap">3750  Grove Avenue,</span> Clinton</td>
+                  
+                  <td>
+                    <div class="form-check">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="customControlValidation2"
+                          name="radio-stacked"  disabled>
+                        <label class="custom-control-label" for="customControlValidation2">Inactive</label>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div ngbDropdown placement="bottom" class="d-inline-block" >
+                      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                        Action
+                      </button>
+                     
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
+                        <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
+                        </button>
+                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
+                            class="ti-marker-alt"></i> Edit</button>
+                        
+                        <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
+                          Delete</button>  
+                      </div>
+                    </div>
+                    
+                   
+                  </td>
+                </tr>     
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab  >
+        
+        <ng-template ngbTabTitle><b>Past Events</b></ng-template>
+      <ng-template ngbTabContent>
+        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab  >
+        
+        <ng-template ngbTabTitle><b> Upcoming Events </b></ng-template>
+      <ng-template ngbTabContent>
+        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+</div>
