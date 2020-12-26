@@ -9,15 +9,27 @@
               <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
               <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add User</button>
           </div> -->
-          <div ngbDropdown class="d-inline-block mb-2 ml-auto mt-2">
+          <div ngbDropdown class="d-inline-block mb-2 mr-auto mt-2">
             <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-              Daily
+              Total Orders
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button class="dropdown-item">Daily</button>
               <button class="dropdown-item">Weekly</button>
               <button class="dropdown-item">Monthly</button>
               <button class="dropdown-item">Yearly</button>
+            </div>
+          </div>
+          <div ngbDropdown class="d-inline-block mb-2 ml-auto mt-2">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+              Cancel Event
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">Cancelation after payment & > 24 hours</button>
+              <button class="dropdown-item">Cancelation after payment & < 24 hours</button>
+              <button class="dropdown-item">Cancelation after payment & > 6 hours</button>
+              <button class="dropdown-item">Cancelation after payment & < 6 hours</button>
+              <button class="dropdown-item">Cancelation after payment & > 3 hours</button>
             </div>
           </div>
           <div class="table-responsive">
@@ -27,12 +39,12 @@
                   <!-- <th>Photo</th> -->
                   <th>Event Name</th>
                   <th>Event Organizer</th>
-                  <th>Gender</th>
-                  <th>Timing</th>
+                   <th>Timing</th>
                   <th>Status</th>
-                  <th>Users</th>
-                  <th>Address</th>               
-                  <th>User Status</th>
+                  <th>Confirmed Seats</th>
+                  <th>Avaible Seats</th>
+                  <th>Canceled Seats</th>  
+                  <th>Total Seats</th>                  
                   <th>Action</th>
                 </tr>
               </thead>
@@ -41,23 +53,19 @@
                   <!-- <td>
                     <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
                   </td> -->
+                  <td>Digital Elite Camp</td>
                   <td>Ronny </td>
                   <td>example@gmail.com</td>
-                  <td>Male</td>
-                  <td><span class="text-nowrap">+91-7858485474</span></td>
-                  <td>Pulsar</td>
-                  <td><span class="text-nowrap">HR-04-V-2433</span></td>
-                  <td><span class="text-nowrap">3750  Grove Avenue,</span> Clinton</td>
-                  
-                  <td>
-                    <div class="form-check">
-                      <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2"
-                          name="radio-stacked"  disabled>
-                        <label class="custom-control-label" for="customControlValidation2">Inactive</label>
-                      </div>
-                    </div>
-                  </td>
+                      <td><span class="text-nowrap">+91-7858485474</span></td>
+                     <td> <button type="button" class="btn btn-outline-danger "
+                      ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                      Cancel
+                    </button></td>
+                 
+                  <td><span class="text-nowrap">40</span></td>
+                  <td>10</td>
+                    <td>50</td>
+           
                   <td>
                     <div ngbDropdown placement="bottom" class="d-inline-block" >
                       <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
@@ -65,11 +73,6 @@
                       </button>
                      
                       <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
-                        <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
-                        </button>
-                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                            class="ti-marker-alt"></i> Edit</button>
-                        
                         <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
                           Delete</button>  
                       </div>
@@ -78,47 +81,7 @@
                    
                   </td>
                 </tr>     
-                <tr>
-                  <td>
-                    <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                  </td>
-                  <td>Ronny </td>
-                  <td>example@gmail.com</td>
-                  <td>Male</td>
-                  <td><span class="text-nowrap">+91-7858485474</span></td>
-                  <td>Pulsar</td>
-                  <td><span class="text-nowrap">HR-04-V-2433</span></td>
-                  <td><span class="text-nowrap">3750  Grove Avenue,</span> Clinton</td>
-                  
-                  <td>
-                    <div class="form-check">
-                      <div class="custom-control custom-radio">
-                        <input type="radio" class="custom-control-input" id="customControlValidation2"
-                          name="radio-stacked"  disabled>
-                        <label class="custom-control-label" for="customControlValidation2">Inactive</label>
-                      </div>
-                    </div>
-                  </td>
-                  <td>
-                    <div ngbDropdown placement="bottom" class="d-inline-block" >
-                      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                        Action
-                      </button>
-                     
-                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
-                        <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i> View
-                        </button>
-                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                            class="ti-marker-alt"></i> Edit</button>
-                        
-                        <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
-                          Delete</button>  
-                      </div>
-                    </div>
-                    
-                   
-                  </td>
-                </tr>     
+                
               </tbody>
             </table>
           </div>

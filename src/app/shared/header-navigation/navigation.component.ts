@@ -10,63 +10,48 @@ declare var $: any;
 
 @Component({
   selector: 'app-navigation',
-  templateUrl: './navigation.component.html'
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements AfterViewInit {
   @Output() toggleSidebar = new EventEmitter<void>();
-  @Output() toggleSideba2 = new EventEmitter<void>();
 
   public config: PerfectScrollbarConfigInterface = {};
 
   public showSearch = false;
-
+  public element1: any;
   constructor(private modalService: NgbModal) {}
 
   // This is for Notifications
   notifications: Object[] = [
     {
       btn: 'btn-danger',
-      icon: 'mdi mdi-bike',
-      title: 'New Bike',
+      icon: 'ti-link',
+      title: 'Luanch Admin',
       subject: 'Just see the my new admin!',
       time: '9:30 AM'
     },
     {
-      btn: 'btn-danger',
-      icon: 'sl-icon-user',
-      title: 'New User',
-      subject: 'Just see the my new admin!',
-      time: '9:30 AM'
+      btn: 'btn-success',
+      icon: 'ti-calendar',
+      title: 'Event today',
+      subject: 'Just a reminder that you have event',
+      time: '9:10 AM'
     },
     {
-      btn: 'btn-danger',
-      icon: 'mdi mdi-bike',
-      title: 'New Bike',
-      subject: 'Just see the my new admin!',
-      time: '9:30 AM'
+      btn: 'btn-info',
+      icon: 'ti-settings',
+      title: 'Settings',
+      subject: 'You can customize this template as you want',
+      time: '9:08 AM'
     },
-    
-    // {
-    //   btn: 'btn-success',
-    //   icon: 'ti-calendar',
-    //   title: 'Event today',
-    //   subject: 'Just a reminder that you have event',
-    //   time: '9:10 AM'
-    // },
-    // {
-    //   btn: 'btn-info',
-    //   icon: 'ti-settings',
-    //   title: 'Settings',
-    //   subject: 'You can customize this template as you want',
-    //   time: '9:08 AM'
-    // },
-    // {
-    //   btn: 'btn-primary',
-    //   icon: 'ti-user',
-    //   title: 'Pavan kumar',
-    //   subject: 'Just see the my admin!',
-    //   time: '9:00 AM'
-    // }
+    {
+      btn: 'btn-primary',
+      icon: 'ti-user',
+      title: 'Pavan kumar',
+      subject: 'Just see the my admin!',
+      time: '9:00 AM'
+    }
   ];
 
   // This is for Mymessages
@@ -100,6 +85,18 @@ export class NavigationComponent implements AfterViewInit {
       time: '9:00 AM'
     }
   ];
+  addBikeModal(addBike) {
+    this.modalService.open(addBike, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg',backdrop:"static"});
+  }
 
   ngAfterViewInit() {}
+   openBox() {
+    let element = document.getElementById("notification");    
+    element.classList.toggle("sidebar_slide");
+    
+  }
+  closeBox(){
+    let element1 = document.getElementById("arrow-close").parentElement;
+    element1.classList.remove("sidebar_slide");
+  }
 }

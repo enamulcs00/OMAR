@@ -14,6 +14,12 @@ export class ReviewsComponent implements OnInit {
   reviewModal(review) {
     this.modalService.open(review, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
   }
+  addreviewModal(addreview) {
+    this.modalService.open(addreview, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
+  }
+  reviewDeleteModal(reviewDelete) {
+    this.modalService.open(reviewDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
+  }
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';

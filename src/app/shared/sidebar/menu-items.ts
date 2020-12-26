@@ -687,14 +687,14 @@ export const ROUTES: RouteInfo[] = [
         extralink: false,
         submenu: []
     },
-//     {
-//         path: '/pages/analytics',
-//         title: 'Analytics',
-//         icon: 'mdi mdi-chart-arc',
-//         class: '',
-//         extralink: false,
-//         submenu: []
-//     },
+    {
+        path: '/pages/analytics',
+        title: 'Analytics',
+        icon: 'mdi mdi-chart-arc',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
 //      {
 //         path: '',
 //         title: 'CMS Pages',
