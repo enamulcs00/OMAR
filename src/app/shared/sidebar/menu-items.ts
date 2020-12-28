@@ -680,6 +680,14 @@ export const ROUTES: RouteInfo[] = [
     //     submenu: []
     // },
     {
+        path: '/pages/rewards',
+        title: 'Rewards',
+        icon: 'ti-gift',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+    {
         path: '/pages/notification',
         title: 'Brodcast Notification',
         icon: 'sl-icon-bell',
@@ -695,6 +703,7 @@ export const ROUTES: RouteInfo[] = [
         extralink: false,
         submenu: []
     },
+   
 //      {
 //         path: '',
 //         title: 'CMS Pages',

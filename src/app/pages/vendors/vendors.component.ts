@@ -35,6 +35,12 @@ userDetailModal(userDetail) {
 addUserModal(addUser) {
   this.modalService.open(addUser, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
 }
+vendorConfirmModal(vendorConfirm) {
+  this.modalService.open(vendorConfirm, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
+}
+vendorUnconfirmModal(vendorUnconfirm) {
+  this.modalService.open(vendorUnconfirm, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
+}vendorUnconfirm
 private getDismissReason(reason: any): string {
   if (reason === ModalDismissReasons.ESC) {
     return 'by pressing ESC';

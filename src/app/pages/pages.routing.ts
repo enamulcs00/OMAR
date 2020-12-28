@@ -19,6 +19,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NotificationComponent } from './notification/notification.component';
 import { VendorsComponent } from './vendors/vendors.component';
 import { EventsComponent } from './events/events.component';
+import { RewardsComponent } from './rewards/rewards.component';
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
 
@@ -67,6 +68,17 @@ export const PagesRoutes: Routes = [
           urls: [
             { title: 'Dashboard', url: '/dashboard' }, 
             { title: 'Events' }
+          ]
+        }
+      },
+      {
+        path: 'rewards',
+        component: RewardsComponent,
+        data: {
+          title: 'Rewards',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Rewards' }
           ]
         }
       },

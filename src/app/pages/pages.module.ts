@@ -31,6 +31,7 @@ import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { NotificationComponent } from './notification/notification.component';
 import { VendorsComponent } from './vendors/vendors.component';
 import { EventsComponent } from './events/events.component';
+import { RewardsComponent } from './rewards/rewards.component';
 
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
@@ -68,7 +69,8 @@ CommonModule,
     FaqComponent,
     NotificationComponent,
     VendorsComponent,
-    EventsComponent
+    EventsComponent,
+    RewardsComponent
   ]
 })
 export class PagesModule {}

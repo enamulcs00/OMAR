@@ -12,7 +12,11 @@ export class EventsComponent implements OnInit {
   ngOnInit(): void {
   }
   
-  eventDeleteModal(eventDelete) {
-    this.modalService.open(eventDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
+  userDeleteModal(userDelete) {
+    this.modalService.open(userDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
+  }
+
+  openWindowCustomClass(content3) {
+    this.modalService.open(content3, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
   }
 }

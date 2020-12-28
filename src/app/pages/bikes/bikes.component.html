@@ -18,6 +18,7 @@
                   <th>Vendor Name</th>
                   <th>User Name</th>
                   <th>Price Per Hour</th>                                 
+                  <th>Rent Time</th>                                 
                   <th>Action</th> 
                 </tr>
               </thead>
@@ -31,6 +32,7 @@
                   <td>John</td>
                   <td>Sandy</td>
                   <td> $10 </td>
+                  <td> 10:30 AM</td>
                   <td> 
                     <div ngbDropdown placement="bottom" class="d-inline-block">
                         <button
@@ -117,7 +119,7 @@
                    </ul>
                 </div>
                 <div class="col-md-6">
-                  <h4>Bike Detail</h4>
+                  <h4>User Detail</h4>
                   <ul class="list-block">
                     <li class="list-block-listing">Name: <span class="font-weight-600">Sandy</span></li>
                     <li class="list-block-listing">Email: <span class="font-weight-600">Hannagover@gmail.com</span>
@@ -173,27 +175,16 @@
                 <div class="col-md-6">
                   
                   <div class="form-group">
-                    <label class="control-label">Bike ID</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="John doe" value="#54565676">
+                    <label class="control-label">Bike Name</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="John doe" value="Plusar 150">
   
                   </div>
                 </div>
                 <!--/span-->
                 <div class="col-md-6">
                   <div class="form-group has-success">
-                    <label class="control-label">Bike Battery</label>
-                    <select class="form-control custom-select">
-                      <option value="">10%</option>
-                      <option value="">20%</option>
-                      <option value="">30%</option>
-                      <option value="">40%</option>
-                      <option value="">50%</option>
-                      <option value="">60%</option>
-                      <option value="">70%</option>
-                      <option value="">80%</option>
-                      <option value="">90%</option>
-                      <option value="">100%</option>
-                    </select>
+                    <label class="control-label">Bike Number</label>
+                    <input type="text" id="firstName" class="form-control" placeholder="John doe" value="HR-03-v-2034">
   
                   </div>
   
@@ -204,18 +195,19 @@
               <div class="row ">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="control-label">Upload QR Code</label>
-                    
-                    <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
+                    <label class="control-label">Vendor Name</label>
+                    <input type="text" id="location" class="form-control form-control-danger"
+                    Value="John">
+                    <!-- <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div> -->
   
                   </div>
                 </div>
                 <!--/span-->
                 <div class="col-md-6">
                   <div class="form-group has-danger">
-                    <label class="control-label">Location</label>
+                    <label class="control-label">User Name</label>
                     <input type="text" id="location" class="form-control form-control-danger"
-                      placeholder="Location 1">
+                     value="Sandy">
   
                   </div>
                 </div>
@@ -226,17 +218,20 @@
               <div class="row">                
                 <!--/span-->
                 <div class="col-md-6">
+                  <label>Rent Per Hours</label>
+                  <input type="text" value="$ 10" class="form-control form-control-danger">
+                </div>
+                <!--/span-->
+                <div class="col-md-6">
                   <div class="form-group">
-                    <label class="control-label">Bike Status</label>             
-                    <select class="form-control custom-select">
-                      <option value="">Occupied Bike</option>
-                      <option value="">Availble Bike</option>
-                      <option value="">Fault Bike</option>                    
-                    </select>                 
+                    <label class="control-label">Time Changed</label>             
+                    <input type="text" id="vendor" class="form-control form-control-danger"
+                    placeholder="10:00 Am">     
                   </div>
                 </div>
                 <!--/span-->
               </div>
+              
               <!--/row-->
             </div>
   
@@ -272,30 +267,16 @@
                   <div class="col-md-6">
                     
                     <div class="form-group">
-                      <label class="control-label">Bike ID</label>
-                      <input type="text" id="firstName" class="form-control" placeholder="Bike ID" >
-    
+                      <label class="control-label">Bike Name</label>
+                      <input type="text" id="firstName" class="form-control" placeholder="Bike Name" >
                     </div>
                   </div>
                   <!--/span-->
                   <div class="col-md-6">
                     <div class="form-group has-success">
-                      <label class="control-label">Bike Battery</label>
-                      <select class="form-control custom-select">
-                        <option value="">10%</option>
-                        <option value="">20%</option>
-                        <option value="">30%</option>
-                        <option value="">40%</option>
-                        <option value="">50%</option>
-                        <option value="">60%</option>
-                        <option value="">70%</option>
-                        <option value="">80%</option>
-                        <option value="">90%</option>
-                        <option value="">100%</option>
-                      </select>
-    
+                      <label class="control-label">Bike Number</label>
+                      <input type="text" id="firstName" class="form-control" placeholder="Bike No" >
                     </div>
-    
                   </div>
                   <!--/span-->
                 </div>
@@ -303,18 +284,16 @@
                 <div class="row ">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="control-label">Upload QR Code</label>
-                      
+                      <label class="control-label">Upload Bike Image</label>
                       <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
-    
                     </div>
                   </div>
                   <!--/span-->
                   <div class="col-md-6">
                     <div class="form-group has-danger">
-                      <label class="control-label">Location</label>
-                      <input type="text" id="location" class="form-control form-control-danger"
-                        placeholder="Location 1">
+                      <label class="control-label">Vendor Name</label>
+                      <input type="text" id="vendor" class="form-control form-control-danger"
+                        placeholder="Vendor Name">
     
                     </div>
                   </div>
@@ -326,12 +305,17 @@
                   <!--/span-->
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="control-label">Bike Status</label>             
-                      <select class="form-control custom-select">
-                        <option value="">Occupied Bike</option>
-                        <option value="">Availble Bike</option>
-                        <option value="">Fault Bike</option>                    
-                      </select>                 
+                      <label class="control-label">Add Time</label>             
+                      <input type="text" id="vendor" class="form-control form-control-danger"
+                      placeholder="10:00 Am">     
+                    </div>
+                  </div>
+                  <!--/span-->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Price Per Hour</label>             
+                      <input type="text" id="vendor" class="form-control form-control-danger"
+                      placeholder="$ 10">     
                     </div>
                   </div>
                   <!--/span-->
