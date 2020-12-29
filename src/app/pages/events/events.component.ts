@@ -13,7 +13,7 @@ export class EventsComponent implements OnInit {
   }
   
   userDeleteModal(userDelete) {
-    this.modalService.open(userDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
+    this.modalService.open(userDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
   }
 
   openWindowCustomClass(content3) {

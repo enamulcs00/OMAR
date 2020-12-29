@@ -17,7 +17,95 @@ export const ROUTES: RouteInfo[] = [
         extralink: false,
         submenu: []
     },
-    
+    {
+        path: '/pages/users',
+        title: 'Users',
+        icon: 'sl-icon-user',
+        class: '', 
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/vendors',
+        title: 'Vendors',
+        icon: 'sl-icon-user',
+        class: '', 
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/events',
+        title: 'Events',
+        icon: 'mdi mdi-calendar-text',
+        class: '', 
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/bikes',
+        title: 'Bikes',
+        icon: 'mdi mdi-bike',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+     {
+        path: '/pages/revenue',
+        title: 'Revenue',
+        icon: 'mdi mdi-chart-areaspline',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/reviews',
+        title: 'Reviews',
+        icon: 'mdi mdi-account-star-variant',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+    // {
+    //     path: '/pages/calculator',
+    //     title: 'Calculator',
+    //     icon: 'mdi mdi-calculator',
+    //     class: '',
+    //     extralink: false,
+    //     submenu: []
+    // },
+    {
+        path: '/pages/rewards',
+        title: 'Rewards',
+        icon: 'ti-gift',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/promocode',
+        title: 'Promo',
+        icon: 'fas fa-percent',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/notification',
+        title: 'Brodcast Notification',
+        icon: 'sl-icon-bell',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+    {
+        path: '/pages/analytics',
+        title: 'Analytics',
+        icon: 'mdi mdi-chart-arc',
+        class: '',
+        extralink: false,
+        submenu: []
+    },
+   
     // {
     //     path: '',
     //     title: 'Apps',
@@ -597,38 +685,7 @@ export const ROUTES: RouteInfo[] = [
     //     extralink: true,
     //     submenu: []
     // },
-    {
-        path: '/pages/users',
-        title: 'Users',
-        icon: 'sl-icon-user',
-        class: '', 
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/pages/vendors',
-        title: 'Vendors',
-        icon: 'sl-icon-user',
-        class: '', 
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/pages/events',
-        title: 'Events',
-        icon: 'mdi mdi-calendar-text',
-        class: '', 
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/pages/bikes',
-        title: 'Bikes',
-        icon: 'mdi mdi-bike',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
+    
 
     // {
     //     path: '/pages/tours',
@@ -655,54 +712,6 @@ export const ROUTES: RouteInfo[] = [
     //     extralink: false,
     //     submenu: []
     // },
-    {
-        path: '/pages/revenue',
-        title: 'Revenue',
-        icon: 'mdi mdi-chart-areaspline',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/pages/reviews',
-        title: 'Reviews',
-        icon: 'mdi mdi-account-star-variant',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
-    // {
-    //     path: '/pages/calculator',
-    //     title: 'Calculator',
-    //     icon: 'mdi mdi-calculator',
-    //     class: '',
-    //     extralink: false,
-    //     submenu: []
-    // },
-    {
-        path: '/pages/rewards',
-        title: 'Rewards',
-        icon: 'ti-gift',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/pages/notification',
-        title: 'Brodcast Notification',
-        icon: 'sl-icon-bell',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
-    {
-        path: '/pages/analytics',
-        title: 'Analytics',
-        icon: 'mdi mdi-chart-arc',
-        class: '',
-        extralink: false,
-        submenu: []
-    },
    
 //      {
 //         path: '',

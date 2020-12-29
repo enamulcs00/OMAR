@@ -32,6 +32,9 @@ import { NotificationComponent } from './notification/notification.component';
 import { VendorsComponent } from './vendors/vendors.component';
 import { EventsComponent } from './events/events.component';
 import { RewardsComponent } from './rewards/rewards.component';
+import { VendordetailComponent } from './vendordetail/vendordetail.component';
+import { UserhistoryComponent } from './userhistory/userhistory.component';
+import { PromocodeComponent } from './promocode/promocode.component';
 
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
@@ -70,7 +73,10 @@ CommonModule,
     NotificationComponent,
     VendorsComponent,
     EventsComponent,
-    RewardsComponent
+    RewardsComponent,
+    VendordetailComponent,
+    UserhistoryComponent,
+    PromocodeComponent
   ]
 })
 export class PagesModule {}

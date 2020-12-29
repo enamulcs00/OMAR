@@ -4,7 +4,14 @@
     <div class="card">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-12 text-right">
+          <div class="col-md-4">
+            <form>
+              <div class="mb-2">
+                <input type="text" class="form-control" id="prenametext" placeholder="Search">
+              </div>
+            </form>
+          </div>
+          <div class="col-md-8 text-right">
             <button class="btn btn-seconadary mb-2" (click)="addreviewModal(addreview)"><i class="sl-icon-plus"></i> Add
               User</button>
           </div>
@@ -34,16 +41,8 @@
                   use for dummy content all type site and use for dummy content..... <a href="javascript:void(0)"
                     (click)="reviewModal(review)">Read More</a></td>
                 <td>
-                  <div ngbDropdown placement="bottom" class="d-inline-block">
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                      Action
-                    </button>
-
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
-                      <button class="dropdown-item" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
-                        Delete</button>
-                    </div>
-                  </div>
+                  <button class="btn btn-danger" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
+                    Delete</button>
                 </td>
               </tr>
               <tr>
@@ -60,16 +59,8 @@
                   use for dummy content all type site and use for dummy content..... <a href="javascript:void(0)"
                     (click)="reviewModal(review)">Read More</a></td>
                 <td>
-                  <div ngbDropdown placement="bottom" class="d-inline-block">
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                      Action
-                    </button>
-
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
-                      <button class="dropdown-item" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
-                        Delete</button>
-                    </div>
-                  </div>
+                  <button class="btn btn-danger" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
+                    Delete</button>
                 </td>
               </tr>
               <tr>
@@ -86,15 +77,8 @@
                   use for dummy content all type site and use for dummy content..... <a href="javascript:void(0)"
                     (click)="reviewModal(review)">Read More</a></td>
                 <td>
-                  <div ngbDropdown placement="bottom" class="d-inline-block">
-                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                      Action
-                    </button>
-                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
-                      <button class="dropdown-item" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
-                        Delete</button>
-                    </div>
-                  </div>
+                  <button class="btn btn-danger" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
+                    Delete</button>
 
 
                 </td>

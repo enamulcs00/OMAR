@@ -4,34 +4,62 @@
       <ngb-tab>
         <ng-template ngbTabTitle><b>Running Events</b></ng-template>
         <ng-template ngbTabContent>
-          <div class="row pl-2 pr-2">
+          <div class="row pl-2 pr-2 mt-2">
+            <div class="col-md-4">
+              <form >
+                <div class="mb-2 mt-2">
+                    <input type="text" class="form-control" id="prenametext" placeholder="Search">
+                </div>
+            </form>
+            </div>
             <!-- <div class="col-md-12  text-right">
               <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
               <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add User</button>
           </div> -->
-            <div ngbDropdown class="d-inline-block mb-2 mr-auto mt-2">
+          <div class="text-right col-md-8">
+            <div ngbDropdown class="d-inline-block mb-2   mr-3 mt-2">
               <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                Total Orders
+                Event Process
               </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button class="dropdown-item">Daily</button>
-                <button class="dropdown-item">Weekly</button>
-                <button class="dropdown-item">Monthly</button>
-                <button class="dropdown-item">Yearly</button>
-              </div>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+              
+              <button class="dropdown-item">Canceled</button>
+              <button class="dropdown-item">Confirmed</button>
+                  <button class="dropdown-item">Compeleted</button>
+                  <button class="dropdown-item">Orginzer Rejected</button>
+                      <button class="dropdown-item">Custmer Canceled</button>
+                      <button class="dropdown-item">No Show Customer</button>
+                      <button class="dropdown-item">Custmers Canceled</button>
+                      <button class="dropdown-item">Payment Faild</button>
             </div>
-            <div ngbDropdown class="d-inline-block mb-2 ml-auto mt-2">
-              <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                Cancel Event
-              </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button class="dropdown-item">Cancelation after payment & > 24 hours</button>
-                <button class="dropdown-item">Cancelation after payment & < 24 hours</button>
-                    <button class="dropdown-item">Cancelation after payment & > 6 hours</button>
-                    <button class="dropdown-item">Cancelation after payment & < 6 hours</button>
-                        <button class="dropdown-item">Cancelation after payment & > 3 hours</button>
+          </div>
+    
+                <div ngbDropdown class="d-inline-block mb-2  mr-3 mt-2">
+                  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                    Total Orders
+                  </button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button class="dropdown-item">Daily</button>
+                    <button class="dropdown-item">Weekly</button>
+                    <button class="dropdown-item">Monthly</button>
+                    <button class="dropdown-item">Yearly</button>
+                  </div>
+                </div>
+               
+                <div ngbDropdown class="d-inline-block mb-2  mt-2">
+                  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                    Cancel Event
+                  </button>         
+                  
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button class="dropdown-item">Cancelation after payment & > 24 hours</button>
+                    <button class="dropdown-item">Cancelation after payment & < 24 hours</button>
+                        <button class="dropdown-item">Cancelation after payment & > 6 hours</button>
+                        <button class="dropdown-item">Cancelation after payment & < 6 hours</button>
+                            <button class="dropdown-item">Cancelation after payment & > 3 hours</button>
+                  </div>
+                </div>
               </div>
-            </div>
           </div>
             <div class="table-responsive">
               <table class="table v-middle product-overview" id="zero_config">
@@ -92,7 +120,25 @@
             <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
             <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add User</button>
         </div> -->
-            <div ngbDropdown class="d-inline-block mb-2 mr-auto mt-2">
+        <div class="ml-auto">
+        <div ngbDropdown class="d-inline-block mb-2   mr-3 mt-2">
+          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            Event Process
+          </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+          
+          <button class="dropdown-item">Canceled</button>
+          <button class="dropdown-item">Confirmed</button>
+              <button class="dropdown-item">Compeleted</button>
+              <button class="dropdown-item">Orginzer Rejected</button>
+                  <button class="dropdown-item">Custmer Canceled</button>
+                  <button class="dropdown-item">No Show Customer</button>
+                  <button class="dropdown-item">Custmers Canceled</button>
+                  <button class="dropdown-item">Payment Faild</button>
+        </div>
+      </div>
+
+            <div ngbDropdown class="d-inline-block mb-2  mr-3 mt-2">
               <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
                 Total Orders
               </button>
@@ -103,20 +149,12 @@
                 <button class="dropdown-item">Yearly</button>
               </div>
             </div>
-            <div ngbDropdown class="d-inline-block mb-2 ml-auto mt-2">
+           
+            <div ngbDropdown class="d-inline-block mb-2  mt-2">
               <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
                 Cancel Event
-              </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button class="dropdown-item">Canceled</button>
-                <button class="dropdown-item">Confirmed</button>
-                    <button class="dropdown-item">Compeleted</button>
-                    <button class="dropdown-item">Orginzer Rejected</button>
-                        <button class="dropdown-item">Custmer Canceled</button>
-                        <button class="dropdown-item">No Show Customer</button>
-                        <button class="dropdown-item">Custmers Canceled</button>
-                        <button class="dropdown-item">Payment Faild</button>
-              </div>
+              </button>         
+              
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                 <button class="dropdown-item">Cancelation after payment & > 24 hours</button>
                 <button class="dropdown-item">Cancelation after payment & < 24 hours</button>
@@ -125,6 +163,7 @@
                         <button class="dropdown-item">Cancelation after payment & > 3 hours</button>
               </div>
             </div>
+          </div>
             <div class="table-responsive">
               <table class="table v-middle product-overview" id="zero_config">
                 <thead>
@@ -263,27 +302,48 @@
             <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
             <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add User</button>
         </div> -->
-            <div ngbDropdown class="d-inline-block mb-2 mr-auto mt-2">
-              <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                Total Orders
-              </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button class="dropdown-item">Daily</button>
-                <button class="dropdown-item">Weekly</button>
-                <button class="dropdown-item">Monthly</button>
-                <button class="dropdown-item">Yearly</button>
+        <div class="ml-auto">
+          <div ngbDropdown class="d-inline-block mb-2   mr-3 mt-2">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+              Event Process
+            </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+            
+            <button class="dropdown-item">Canceled</button>
+            <button class="dropdown-item">Confirmed</button>
+                <button class="dropdown-item">Compeleted</button>
+                <button class="dropdown-item">Orginzer Rejected</button>
+                    <button class="dropdown-item">Custmer Canceled</button>
+                    <button class="dropdown-item">No Show Customer</button>
+                    <button class="dropdown-item">Custmers Canceled</button>
+                    <button class="dropdown-item">Payment Faild</button>
+          </div>
+        </div>
+  
+              <div ngbDropdown class="d-inline-block mb-2  mr-3 mt-2">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                  Total Orders
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button class="dropdown-item">Daily</button>
+                  <button class="dropdown-item">Weekly</button>
+                  <button class="dropdown-item">Monthly</button>
+                  <button class="dropdown-item">Yearly</button>
+                </div>
               </div>
-            </div>
-            <div ngbDropdown class="d-inline-block mb-2 ml-auto mt-2">
-              <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                Cancel Event
-              </button>
-              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button class="dropdown-item">Cancelation after payment & > 24 hours</button>
-                <button class="dropdown-item">Cancelation after payment & < 24 hours</button>
-                    <button class="dropdown-item">Cancelation after payment & > 6 hours</button>
-                    <button class="dropdown-item">Cancelation after payment & < 6 hours</button>
-                        <button class="dropdown-item">Cancelation after payment & > 3 hours</button>
+             
+              <div ngbDropdown class="d-inline-block mb-2  mt-2">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                  Cancel Event
+                </button>         
+                
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button class="dropdown-item">Cancelation after payment & > 24 hours</button>
+                  <button class="dropdown-item">Cancelation after payment & < 24 hours</button>
+                      <button class="dropdown-item">Cancelation after payment & > 6 hours</button>
+                      <button class="dropdown-item">Cancelation after payment & < 6 hours</button>
+                          <button class="dropdown-item">Cancelation after payment & > 3 hours</button>
+                </div>
               </div>
             </div>
             <div class="table-responsive">

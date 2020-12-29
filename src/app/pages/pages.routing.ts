@@ -20,6 +20,9 @@ import { NotificationComponent } from './notification/notification.component';
 import { VendorsComponent } from './vendors/vendors.component';
 import { EventsComponent } from './events/events.component';
 import { RewardsComponent } from './rewards/rewards.component';
+import { VendordetailComponent } from './vendordetail/vendordetail.component';
+import { UserhistoryComponent } from './userhistory/userhistory.component';
+import { PromocodeComponent } from './promocode/promocode.component';
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
 
@@ -50,6 +53,17 @@ export const PagesRoutes: Routes = [
         }
       },
       {
+        path: 'usershistory',
+        component: UserhistoryComponent,
+        data: {
+          title: 'User History',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'User History' }
+          ]
+        }
+      },
+      {
         path: 'vendors',
         component: VendorsComponent,
         data: {
@@ -57,6 +71,17 @@ export const PagesRoutes: Routes = [
           urls: [
             { title: 'Dashboard', url: '/dashboard' }, 
             { title: 'Vendors' }
+          ]
+        }
+      },
+      {
+        path: 'vendorsdetail',
+        component: VendordetailComponent,
+        data: {
+          title: 'Vendors Detail',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Vendors Detail' }
           ]
         }
       },
@@ -79,6 +104,17 @@ export const PagesRoutes: Routes = [
           urls: [
             { title: 'Dashboard', url: '/dashboard' }, 
             { title: 'Rewards' }
+          ]
+        }
+      },
+      {
+        path: 'promocode',
+        component: PromocodeComponent,
+        data: {
+          title: 'Promo Code',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Promo Code' }
           ]
         }
       },
