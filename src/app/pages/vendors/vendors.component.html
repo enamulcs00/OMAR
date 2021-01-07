@@ -8,13 +8,14 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-4">
-            <form >
+            <form>
               <div class="mb-2">
-                  <input type="text" class="form-control" id="prenametext" placeholder="Search">
+                <input type="text" class="form-control" id="prenametext" placeholder="Search">
               </div>
-          </form>
+            </form>
           </div>
           <div class="col-md-8 d-flex  justify-content-end">
+            <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
             <div ngbDropdown class="d-inline-block mb-2 mr-2">
               <button class="btn btn-info text-white" id="dropdownBasic1" ngbDropdownToggle>
                 Status
@@ -26,13 +27,20 @@
             </div>
             <div ngbDropdown class="d-inline-block mb-2">
               <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                Daily
+                Account Type
               </button>
               <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                <button class="dropdown-item">Daily</button>
-                <button class="dropdown-item">Weekly</button>
-                <button class="dropdown-item">Monthly</button>
-                <button class="dropdown-item">Yearly</button>
+                <button class="dropdown-item">Main</button>
+                <button class="dropdown-item">Sub Profile</button>
+              </div>
+            </div>
+            <div ngbDropdown class="d-inline-block mb-2 ml-2">
+              <button class="btn btn-outline-info" id="dropdownBasic1" ngbDropdownToggle>
+                Business Type
+              </button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button class="dropdown-item">Bike</button>
+                <button class="dropdown-item">Event</button>
               </div>
             </div>
             <!-- <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button> -->
@@ -42,60 +50,34 @@
             <table class="table v-middle product-overview" id="zero_config">
               <thead>
                 <tr>
-                  <th>Photo</th>
                   <th>Name</th>
-                  <th>Email ID</th>
-                  <th>Gender</th>
+                  <th>Vendor ID</th>
+                  <th>Account Type</th>
+                  <th>Business Type</th>
+                  <th>Email Id</th>
                   <th>Contact</th>
-                  <th>Address</th>
-                  <th>Online Hours</th>
-                  <th>Order Status</th>
-                  <th>Total Order</th>
-                  <th>Total Stock</th>
-                  <th>Availble Stock</th>
-                  <th>Booked Stock</th>
-                  <th>Total Revenue</th>
-                  <th>User Request</th>
-                  <th>Deliver Time</th>
-                  <th>Vendor Status</th>
+                  <th>Address</th>                
+                  <th>Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
-                    <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                  </td>
-                  <!-- <td><span class="nowrap"> Ronny <a routerLink="/pages/vendorsdetail"><span class="sl-icon-info"></span></a></span></td> -->
                   <td><span class="nowrap"> Ronny </span></td>
+                  <td>#ron34343</td>
+                  <td>Main</td>
+                  <td>Bike</td>
                   <td>example@gmail.com</td>
-                  <td>Male</td>
                   <td><span class="text-nowrap">+91-7858485474</span></td>
-                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td>
-                  <td>3/Hrs</td>
-
+                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td>                  
                   <td>
-                    <button type="button" class="btn btn-outline-danger "
-                      ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                      Cancel
-                    </button>
-                  </td>
-                  <td>50</td>
-                  <td>40</td>
-                  <td>30</td>
-                  <td>10</td>
-                  <td>$ 410</td>
-                  <td>8:40 AM</td>
-                  <td>9:00 AM</td>
-                  <td>
-                    <div class="form-group">
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio1" (click)="vendorConfirmModal(vendorConfirm)">Active</label>
-                      </div>
-                      <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadio2" (click)="vendorUnconfirmModal(vendorUnconfirm)">Inactive</label>
+                    <div ngbDropdown class="d-inline-block">
+                      <button class="btn btn-outline-danger" id="dropdownBasic1" ngbDropdownToggle>
+                        Pending
+                      </button>
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button class="dropdown-item" (click)="vendorConfirmModal(vendorConfirm)">Active</button>
+                        <button class="dropdown-item" (click)="vendorUnconfirmModal(vendorUnconfirm)">Inactive</button>
                       </div>
                     </div>
                   </td>
@@ -109,15 +91,88 @@
                         <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i>
                           View
                         </button>
-                        <!-- <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                            class="ti-marker-alt"></i> Edit</button> -->
+                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
+                            class="ti-marker-alt"></i> Edit</button>
                         <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
                           Delete</button>
                       </div>
                     </div>
                   </td>
                 </tr>
-                
+                <tr>
+                  <td><span class="nowrap"> Ronny </span></td>
+                  <td>#ron34343</td>
+                  <td>Main</td>
+                  <td>Event</td>
+                  <td>example@gmail.com</td>
+                  <td><span class="text-nowrap">+91-7858485474</span></td>
+                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td>
+                   <td>
+                    <div ngbDropdown class="d-inline-block ">
+                      <button class="btn btn-outline-danger" id="dropdownBasic1" ngbDropdownToggle>
+                        Pending
+                      </button>
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button class="dropdown-item" (click)="vendorConfirmModal(vendorConfirm)">Active</button>
+                        <button class="dropdown-item" (click)="vendorUnconfirmModal(vendorUnconfirm)">Inactive</button>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div ngbDropdown placement="bottom" class="d-inline-block">
+                      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                        Action
+                      </button>
+
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
+                        <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i>
+                          View
+                        </button>
+                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
+                            class="ti-marker-alt"></i> Edit</button>
+                        <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
+                          Delete</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="nowrap"> Ronny </span></td>
+                  <td>#ron34343</td>
+                  <td>Main</td>
+                  <td>Event</td>
+                  <td>example@gmail.com</td>
+                  <td><span class="text-nowrap">+91-7858485474</span></td>
+                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td>
+                  <td>
+                    <div ngbDropdown class="d-inline-block ">
+                      <button class="btn btn-outline-danger" id="dropdownBasic1" ngbDropdownToggle>
+                        Pending
+                      </button>
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                        <button class="dropdown-item" (click)="vendorConfirmModal(vendorConfirm)">Active</button>
+                        <button class="dropdown-item" (click)="vendorUnconfirmModal(vendorUnconfirm)">Inactive</button>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div ngbDropdown placement="bottom" class="d-inline-block">
+                      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                        Action
+                      </button>
+
+                      <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
+                        <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i>
+                          View
+                        </button>
+                        <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
+                            class="ti-marker-alt"></i> Edit</button>
+                        <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
+                          Delete</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -179,8 +234,7 @@
                       <div class="col-md-6">
                         <ul class="list-block">
                           <li class="list-block-listing">Name: <span class="font-weight-600">Ronny</span></li>
-                          <li class="list-block-listing">Email: <span
-                              class="font-weight-600">ronny@gmail.com</span>
+                          <li class="list-block-listing">Email: <span class="font-weight-600">ronny@gmail.com</span>
                           </li>
                           <li class="list-block-listing">Gender: <span class="font-weight-600">Female</span>
                           </li>
@@ -201,7 +255,8 @@
                           <li class="list-block-listing">Booked Stock: <span>10</span></li>
                           <li class="list-block-listing">Total Revenue: <span class="font-weight-600">$ 410</span></li>
                           <li class="list-block-listing">User Request: <span class="font-weight-600">8:40 AM</span></li>
-                          <li class="list-block-listing">Delivery Time: <span class="font-weight-600">9:00 AM</span></li>
+                          <li class="list-block-listing">Delivery Time: <span class="font-weight-600">9:00 AM</span>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -256,84 +311,14 @@
           <div class="form-body">
             <div class="card-body">
               <div class="row p-t-20">
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="form-group">
-                    <label class="control-label">Vendor Name</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="John doe">
-
+                    <label class="control-label">Edit Commision</label>
+                    <input type="text" id="firstName" class="form-control" value="$50" placeholder="">
                   </div>
                 </div>
                 <!--/span-->
-                <div class="col-md-6">
-                  <div class="form-group has-success">
-                    <div class="form-group">
-                      <label class="control-label">Upload Vendor Profile</label>
-                      <div class="custom-file"><input class="custom-file-input" id="inputGroupFile01" type="file"><label
-                          class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
-                    </div>
-                  </div>
-                </div>
-                <!--/span-->
-              </div>
-              <!--/row-->
-              <div class="row ">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label">Contact No</label>
-                    <input type="text" id="firstName" class="form-control" placeholder="John doe">
-
-                  </div>
-                </div>
-                <!--/span-->
-                <div class="col-md-6">
-                  <div class="form-group has-danger">
-                    <label class="control-label">Email</label>
-                    <input type="email" id="email" class="form-control form-control-danger"
-                      placeholder="example@gmail.com">
-
-                  </div>
-                </div>
-                <!--/span-->
-              </div>
-              <!--/row-->
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group has-danger">
-                    <label class="control-label">Address</label>
-                    <input type="text" id="Address" class="form-control form-control-danger" placeholder="Address">
-
-                  </div>
-                </div>
-                <!--/span-->
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label">Gender</label>
-                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
-                      <option value="Category 1">Male</option>
-                      <option value="Category 2">Female</option>
-                    </select>
-                  </div>
-                </div>
-                <!--/span-->
-              </div>
-              <!--/row-->
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label">Bike Name</label>
-                    <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
-                  </div>
-                </div>
-                <!--/span-->
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label">Bike No</label>
-                    <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
-                  </div>
-                </div>
-                <!--/span-->
-               
-                <!--/span-->
+                
               </div>
               <!--/row-->
             </div>
@@ -436,7 +421,7 @@
                   </div>
                 </div>
                 <!--/span-->
-              
+
                 <!--/span-->
               </div>
               <!--/row-->
@@ -457,16 +442,22 @@
   </ng-template>
 
   <ng-template #vendorConfirm let-modal>
-    <div class="modal-body">      
-        <label>Add Commision</label>
-        <div  class="input-group mb-3"><span  class="input-group-text">%</span><input  aria-describedby="basic-addon1" aria-label="" class="form-control" placeholder="" type="text"><div  class="input-group-append"><button  class="btn mr-0 btn-info" type="button">Submit</button></div></div>
-      
+    <div class="modal-body">
+      <label>Add Commision</label>
+      <div class="input-group mb-3"><span class="input-group-text">%</span><input aria-describedby="basic-addon1"
+          aria-label="" class="form-control" placeholder="" type="text">
+        <div class="input-group-append"><button class="btn mr-0 btn-info" type="button">Submit</button></div>
+      </div>
+
     </div>
   </ng-template>
   <ng-template #vendorUnconfirm let-modal>
-    <div class="modal-body">      
-        <label>Add Note</label>
-        <div  class="input-group mb-3"><span  class="input-group-text">@</span><input  aria-describedby="basic-addon1" aria-label="" class="form-control" placeholder="" type="text"><div  class="input-group-append"><button  class="btn mr-0 btn-info" type="button">Submit</button></div></div>
-      
+    <div class="modal-body">
+      <label>Add Note</label>
+      <div class="input-group mb-3"><span class="input-group-text">@</span><input aria-describedby="basic-addon1"
+          aria-label="" class="form-control" placeholder="" type="text">
+        <div class="input-group-append"><button class="btn mr-0 btn-info" type="button">Submit</button></div>
+      </div>
+
     </div>
   </ng-template>

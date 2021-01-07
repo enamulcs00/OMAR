@@ -35,6 +35,7 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { VendordetailComponent } from './vendordetail/vendordetail.component';
 import { UserhistoryComponent } from './userhistory/userhistory.component';
 import { PromocodeComponent } from './promocode/promocode.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
@@ -76,7 +77,8 @@ CommonModule,
     RewardsComponent,
     VendordetailComponent,
     UserhistoryComponent,
-    PromocodeComponent
+    PromocodeComponent,
+    OrderHistoryComponent
   ]
 })
 export class PagesModule {}

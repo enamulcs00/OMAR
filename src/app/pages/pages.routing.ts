@@ -23,6 +23,7 @@ import { RewardsComponent } from './rewards/rewards.component';
 import { VendordetailComponent } from './vendordetail/vendordetail.component';
 import { UserhistoryComponent } from './userhistory/userhistory.component';
 import { PromocodeComponent } from './promocode/promocode.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
 
@@ -60,6 +61,17 @@ export const PagesRoutes: Routes = [
           urls: [
             { title: 'Dashboard', url: '/dashboard' }, 
             { title: 'User History' }
+          ]
+        }
+      },
+      {
+        path: 'orderhistory',
+        component: OrderHistoryComponent,
+        data: {
+          title: 'Order History',
+          urls: [
+            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Order History' }
           ]
         }
       },

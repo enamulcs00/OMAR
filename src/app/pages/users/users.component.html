@@ -32,31 +32,31 @@
             <table class="table v-middle product-overview" id="zero_config">
               <thead>
                 <tr>
-                  <th>Photo</th>
+                  <!-- <th>Photo</th> -->
                   <th>Name</th>
                   <th>Email ID</th>
                   <th>Gender</th>
                   <th>Contact</th>
-                  <th>Bike Name</th>
-                  <th>Bike No</th>
-                  <th>Address</th>
+                  <!-- <th>Bike Name</th> -->
+                  <!-- <th>Bike No</th>-->
+                  <th>Order History</th> 
                   <th>User Status</th>
                   <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <!-- <td>
                     <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                  </td>
+                  </td> -->
                   <td><span class="nowrap"> Tony <a routerLink="/pages/usershistory"><span
                           class="mdi mdi-information-outline"></span></a></span></td>
                   <td>example@gmail.com</td>
                   <td>Male</td>
                   <td><span class="text-nowrap">+91-7858485474</span></td>
-                  <td>Pulsar</td>
-                  <td><span class="text-nowrap">HR-04-V-2433</span></td>
-                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td>
+                  <td><a routerLink="../orderhistory" class="btn btn-info">View</a></td>
+                  <!-- <td><span class="text-nowrap">HR-04-V-2433</span></td>
+                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td> -->
 
                   <td>
                     <div class="form-check">
@@ -89,17 +89,17 @@
                   </td>
                 </tr>
                 <tr>
-                  <td>
+                  <!-- <td>
                     <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                  </td>
-                  <td><span class="nowrap"> Anndy <a routerLink="/pages/usershistory"><span
+                  </td> -->
+                  <td><span class="nowrap"> Tony <a routerLink="/pages/usershistory"><span
                           class="mdi mdi-information-outline"></span></a></span></td>
                   <td>example@gmail.com</td>
                   <td>Male</td>
                   <td><span class="text-nowrap">+91-7858485474</span></td>
-                  <td>Pulsar</td>
-                  <td><span class="text-nowrap">HR-04-V-2433</span></td>
-                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td>
+                  <!-- <td>Pulsar</td> -->
+                  <!-- <td><span class="text-nowrap">HR-04-V-2433</span></td>
+                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td> -->
 
                   <td>
                     <div class="form-check">
@@ -206,7 +206,7 @@
 
                         </ul>
                       </div>
-                      <div class="col-md-6">
+                      <!-- <div class="col-md-6">
                         <ul class="list-block">
 
                           <li class="list-block-listing">Total Bike: <span class="font-weight-600">1</span></li>
@@ -214,13 +214,13 @@
                           <li class="list-block-listing">Bike No: <span>HR-04-V-2433</span></li>
                           <li class="list-block-listing">Vendor Name: <span class="font-weight-600">John</span></li>
                         </ul>
-                      </div>
+                      </div> -->
                     </div>
                   </ng-template>
                 </ngb-tab>
 
-                <ngb-tab>
-                  <ng-template ngbTabTitle><b>User History</b></ng-template>
+                <!-- <ngb-tab>
+                  <ng-template ngbTabTitle><b>Order History</b></ng-template>
                   <ng-template ngbTabContent>
                     <ul class="user_history pl-0">
                       <li class="user_history_list"><span class="user_history_list_icon active"><i
@@ -236,7 +236,7 @@
                             class="mdi mdi-map-marker"></i></span> <span>Location 5</span> </li>
                     </ul>
                   </ng-template>
-                </ngb-tab>
+                </ngb-tab> -->
               </ngb-tabset>
             </div>
           </div>
