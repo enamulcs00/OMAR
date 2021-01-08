@@ -36,6 +36,7 @@ import { VendordetailComponent } from './vendordetail/vendordetail.component';
 import { UserhistoryComponent } from './userhistory/userhistory.component';
 import { PromocodeComponent } from './promocode/promocode.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { UserticketsComponent } from './usertickets/usertickets.component';
 
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
@@ -78,7 +79,8 @@ CommonModule,
     VendordetailComponent,
     UserhistoryComponent,
     PromocodeComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    UserticketsComponent
   ]
 })
 export class PagesModule {}

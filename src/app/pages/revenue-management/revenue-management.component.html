@@ -40,9 +40,48 @@
 
     <!-- Card -->
   </div>
-  <!-- col-md-4 -->
-  <div class="col-md-4">
+   <!-- col-md-4 -->
+   <div class="col-md-4">
     <!-- Card -->
+    <div class="card">
+      <div class="card-body card-box  p-2">
+        <div class="d-flex align-items-center">
+          <!-- <div class="ml-auto">
+            <span class="btn btn-circle btn-sm bg-danger text-white"><i
+                class="far fa-money-bill-alt font-16"></i></span>
+              </div> -->
+               
+          <div class="m-l-10 w-100">
+            <form class="">
+              <div class="form-group mb-2">
+                <h5> Total Payment Received Day</h5>
+                <div class="input-group">
+                  
+                  <input class="form-control" placeholder="yyyy-mm-dd"
+                         name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"><i class="fas fa-calendar-alt"></i></button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="d-flex">
+            <h5 class="m-b-0 font-light"> <span class="btn btn-circle btn-sm bg-danger text-white p-2"><i
+              class="far fa-money-bill-alt font-16 "></i></span> Card: $ 150</h5>
+            <h5 class="m-b-0 font-light pl-2"> <span class="btn btn-circle btn-sm bg-danger text-white p-2"><i
+              class="far fa-money-bill-alt font-16 "></i></span> Cash: $ 150</h5>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Card -->
+  </div>
+  <!-- col-md-4 -->
+ <!-- <div class="col-md-4">
+     Card 
     <div class="card">
       <div class="card-body card-box">
         <label>Commissions</label>
@@ -54,66 +93,132 @@
       </div>
     </div>
 
-    <!-- Card -->
-  </div>
+    Card 
+  </div>-->
   <!-- col-md-4 -->
+  
   <!-- Column -->
   <div class="col-md-12">
     <h3>All Transaction </h3>
   </div>
   <div class="col-lg-12">
     <div class="card">
-
+      
       <div class="card-body">
-        <div class="">
+        <div class="w-100 text-right">
+          <div ngbDropdown class="d-inline-block mb-2  mr-3 mt-2">
+            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+              Total Orders
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="dropdown-item">Complete</button>
+              <button class="dropdown-item">Pending</button>
+              <button class="dropdown-item">Cash</button>
+              <button class="dropdown-item">Card</button>
+            </div>
+        </div>
+        </div>
+        <div class="table-responsive">
           <table class="table v-middle product-overview" id="zero_config">
             <thead>
               <tr>
 
                 <th>Vendor</th>
+                <th>Vendor Id</th>
                 <th>User</th>
+                <th>User Id</th> 
                 <th>Payment Type</th>
                 <th>Amount</th>
+                  <th>Vendor Profit</th>
                 <th>Commission</th>
+                <th>VAT</th>
+                <th>Profit</th>
+                <th>Revert</th>
                 <th>Status</th>
+                <th>Invoice</th>
               </tr>
             </thead>
             <tbody>
               <tr>
 
                 <td>Ronny </td>
+                <td>Ron343434 </td>
                 <td>John</td>
+                <td>Joh766656</td>
                 <td>Cash</td>
                 <td>$250</td>
+                <td>$100</td>
                 <td>10%</td>
-                <td> <select class="custom-select b-0">
-                    <option selected="">Enable</option>
-                    <option value="1">Disable</option>
-                  </select></td>
+                <td>0%</td>
+                <td>$60</td>
+               
+                <td>  <div class="w-100 text-right">
+                  <div ngbDropdown class="d-inline-block mb-2  mr-3 mt-2">
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                      Payment
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button class="dropdown-item">Revert</button>
+                      <button class="dropdown-item">No Revet</button>                      
+                    </div>
+                </div>
+                </div></td>
+                <td><button class="btn btn-outline-success">Completed</button></td>
+                <td><button class="btn btn-primary" (click)="openWindowCustomClass(content3)">View</button></td>
               </tr>
               <tr>
 
                 <td>Ronny </td>
+                <td>Ron343434 </td>
                 <td>John</td>
+                <td>Joh766656</td>
                 <td>Cash</td>
                 <td>$250</td>
+                <td>$0</td>
                 <td>10%</td>
-                <td> <select class="custom-select b-0">
-                    <option selected="">Enable</option>
-                    <option value="1">Disable</option>
-                  </select></td>
-              </tr>
+                <td>0%</td>
+                <td>$0</td>
+               
+                <td>  <div class="w-100 text-right">
+                  <div ngbDropdown class="d-inline-block mb-2  mr-3 mt-2">
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                      Payment
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button class="dropdown-item">Revert</button>
+                      <button class="dropdown-item">No Revet</button>                      
+                    </div>
+                </div>
+                </div></td>
+                <td><button class="btn btn-outline-warning">Pending</button></td>
+                <td><button class="btn btn-primary" (click)="openWindowCustomClass(content3)">View</button></td>
+              </tr> 
               <tr>
 
                 <td>Ronny </td>
+                <td>Ron343434 </td>
                 <td>John</td>
+                <td>Joh766656</td>
                 <td>Cash</td>
                 <td>$250</td>
+                <td>$100</td>
                 <td>10%</td>
-                <td> <select class="custom-select b-0">
-                    <option selected="">Enable</option>
-                    <option value="1">Disable</option>
-                  </select></td>
+                <td>0%</td>
+                <td>$60</td>
+               
+                <td>  <div class="w-100 text-right">
+                  <div ngbDropdown class="d-inline-block mb-2  mr-3 mt-2">
+                    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                      Payment
+                    </button>
+                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                      <button class="dropdown-item">Revert</button>
+                      <button class="dropdown-item">No Revet</button>                      
+                    </div>
+                </div>
+                </div></td>
+                <td><button class="btn btn-outline-success">Completed</button></td>
+                <td><button class="btn btn-primary" (click)="openWindowCustomClass(content3)">View</button></td>
               </tr>
 
             </tbody>
@@ -148,3 +253,45 @@
 
 
 </div>
+
+<ng-template #content3 let-modal>
+  <div class="modal-body">
+      <div class="table-responsive">
+          <table class="table">
+              <tr>
+                  <th>Invoice Id</th>
+                  <th>Date</th>
+                  <th>Recipient</th>
+                  <th>Email</th>
+                  <th>Contact</th>
+                  <th>Status</th>
+                  
+              </tr>
+              <tr>
+                  <td>#123412451</td>
+                  <td>#June 1, 2020, 08:22 AM </td>
+                  <td>XYZ Store ID </td>
+                  <td>example@gmail.com</td>
+                  <td>+91-321324567</td>
+                  <td><button class="btn btn-outline-success">Completed</button></td>
+              </tr>
+              <tr>
+                <td>#123412451</td>
+                <td>#June 1, 2020, 08:22 AM </td>
+                <td>XYZ Store ID </td>
+                <td>example@gmail.com</td>
+                <td>+91-321324567</td>
+                <td><button class="btn btn-outline-success">Completed</button></td>
+            </tr>
+            <tr>
+              <td>#123412451</td>
+              <td>#June 1, 2020, 08:22 AM </td>
+              <td>XYZ Store ID </td>
+              <td>example@gmail.com</td>
+              <td>+91-321324567</td>
+              <td><button class="btn btn-outline-success">Completed</button></td>
+          </tr>
+          </table>
+      </div>
+  </div>
+</ng-template>

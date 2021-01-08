@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import * as Chartist from 'chartist';
 import { ChartType, ChartEvent } from 'ng-chartist';
 import * as c3 from 'c3';
+import {NgbDateStruct,NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
 
 export interface Chart {
   type: ChartType;
@@ -16,8 +18,8 @@ export interface Chart {
   styleUrls: ['./revenue-management.component.scss']
 })
 export class RevenueManagementComponent implements OnInit {
-
-  constructor() { }
+  model: NgbDateStruct;
+  constructor(private modalService: NgbModal) {}
 
   ngOnInit(): void {
   }
@@ -248,13 +250,13 @@ public barChartData: any[] = [
 { data: [65, 59, 80, 81, 56, 55, 40, 65, 64, 2, 3, 55], label: 'Bike' },
 ];
 public barChartColors: Array<any> = [
-{ backgroundColor: '#36bea6' }
+{ backgroundColor: '#fbb03b' }
 ];
 
   // lineChart
   public lineChartData: Array<any> = [
-    { data: [65, 39, 80, 15, 76, 35, 40], label: 'Series A' },
-    { data: [18, 58, 20, 69, 16, 27, 90], label: 'Series B' }
+    { data: [65, 39, 80, 15, 76, 35, 40], label: 'Profit Per Month' },
+    // { data: [18, 58, 20, 69, 16, 27, 90], label: 'Series B' }
   ];
 //   user
 public lineChartLabels: Array<any> = [
@@ -284,11 +286,11 @@ public lineChartColors: Array<any> = [
   {
     // grey
     backgroundColor: 'rgba(54,190,166,.1)',
-    borderColor: '#36bea6',
-    pointBackgroundColor: '#36bea6',
+    borderColor: '#fbb03b',
+    pointBackgroundColor: '#fbb03b',
     pointBorderColor: '#fff',
     pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: '#36bea6'
+    pointHoverBorderColor: '#fbb03b'
   },
   {
     // dark grey
@@ -300,4 +302,7 @@ public lineChartColors: Array<any> = [
     pointHoverBorderColor: '#2962FF'
   }
 ];
+openWindowCustomClass(content3) {
+  this.modalService.open(content3, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
+}
 }

@@ -1,0 +1,197 @@
+<div class="row">
+    <!-- Column -->
+
+
+    <div class="col-lg-12">
+        <div class="card">
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <form>
+                            <div class="mb-2">
+                                <input type="text" class="form-control" id="prenametext" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8  d-flex justify-content-end">
+                        <a routerLink="../events" class="btn btn-danger d-inline-block mb-2 mr-2">Back</a>
+                      
+                        <!-- <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
+            <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add
+              User</button> -->
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table v-middle product-overview" id="zero_config">
+                            <thead>
+                                <tr>
+                                    <!-- <th>Photo</th> -->
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone No.</th>
+                                    <th>Ticket No.</th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sam</td>
+                                    <td>Sam@1234agail.com</td>
+                                    <td>7894561230</td>
+                                    <td>#123415654</td>                                
+                                </tr>
+                                <tr>
+                                    <td>Sam</td>
+                                    <td>Sam@1234agail.com</td>
+                                    <td>7894561230</td>
+                                    <td>#123415654</td>                                
+                                </tr>
+                                <tr>
+                                    <td>Sam</td>
+                                    <td>Sam@1234agail.com</td>
+                                    <td>7894561230</td>
+                                    <td>#123415654</td>                                
+                                </tr>
+                                <tr>
+                                    <td>Sam</td>
+                                    <td>Sam@1234agail.com</td>
+                                    <td>7894561230</td>
+                                    <td>#123415654</td>                                
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Column -->
+    </div>
+
+
+
+
+    <!-- view modal -->
+
+
+    <!-- delete modal -->
+    <ng-template #userDelete let-modal>
+        <div class="modal-body">
+            <p>Are You Sure want to delete this user?</p>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary mr-2" aria-label="Close" (click)="modal.dismiss('Cross click')">Yes</button>
+                <button type="button" class="btn btn-seconadary" aria-label="Close" (click)="modal.dismiss('Cross click')">No</button>
+            </div>
+        </div>
+    </ng-template>
+
+    <!-- add user -->
+    <ng-template #editOrder let-modal>
+        <div class="modal-body">
+            <div class="card">
+                <form action="#">
+                    <div class="form-body">
+                        <div class="card-body">
+                            <div class="row p-t-20">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Order ID </label>
+                                        <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Event Name</label>
+                                        <input type="text" id="firstName" class="form-control" placeholder="John doe">
+
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+                            <!--/row-->
+                            <div class="row ">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="control-label">Order Bike </label>
+                                        <input type="text" id="firstName" class="form-control" placeholder="50">
+
+                                    </div>
+                                </div>
+                                <!--/span-->
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger">
+                                        <label class="control-label">Attend Event</label>
+                                        <input type="email" id="email" class="form-control form-control-danger" placeholder="100">
+
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+                            <!--/row-->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger">
+                                        <label class="control-label">Start Date</label>
+                                        <input type="date" id="email" class="form-control form-control-danger" placeholder="12-04-2021">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group has-danger">
+                                        <label class="control-label">End Date</label>
+                                        <input type="date" id="email" class="form-control form-control-danger" placeholder="12-04-2021">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <div class="card-body">
+                                <button type="submit" class="btn btn-success mr-3" (click)="modal.dismiss('Cross click')">
+                  <i class="fa fa-check"></i> Update</button>
+                                <button type="button" class="btn btn-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </ng-template>
+
+    <ng-template #userHistory let-modal>
+        <div class="modal-body">
+            <h4>Event History Detail</h4>
+            <div class="table-responsive">
+                <table class="table v-middle product-overview" id="zero_config">
+                    <thead>
+                        <tr>
+                            <th> Name</th>
+                            <th>Contact </th>
+                            <th>Email</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Andy</td>
+                            <td>748545254425</td>
+                            <td>example@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Andy</td>
+                            <td>748545254425</td>
+                            <td>example@gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>Andy</td>
+                            <td>748545254425</td>
+                            <td>example@gmail.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </ng-template>

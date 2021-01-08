@@ -22,7 +22,7 @@ open1(content1) {
   });
 }
 openWindowCustomClass(content3) {
-  this.modalService.open(content3, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
+  this.modalService.open(content3, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
 }
 userprofileModal(userDelete) {
   this.modalService.open(userDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
@@ -36,6 +36,11 @@ addBikeModal(addBike) {
 userDetailModal(userDetail) {
   this.modalService.open(userDetail, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
 }
+detailprofileModal(detailprofile) {
+  this.modalService.open(detailprofile, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
+}
+
+
 private getDismissReason(reason: any): string {
   if (reason === ModalDismissReasons.ESC) {
     return 'by pressing ESC';

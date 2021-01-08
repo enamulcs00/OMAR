@@ -24,6 +24,7 @@ import { VendordetailComponent } from './vendordetail/vendordetail.component';
 import { UserhistoryComponent } from './userhistory/userhistory.component';
 import { PromocodeComponent } from './promocode/promocode.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
+import { UserticketsComponent } from './usertickets/usertickets.component';
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
 
@@ -48,7 +49,7 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Users',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'Users' }
           ]
         }
@@ -59,7 +60,7 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'User History',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'User History' }
           ]
         }
@@ -70,7 +71,7 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Order History',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'Order History' }
           ]
         }
@@ -81,8 +82,19 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Vendors',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'Vendors' }
+          ]
+        }
+      },
+      {
+        path: 'usertickets',
+        component: UserticketsComponent,
+        data: {
+          title: 'User Tickets',
+          urls: [
+            { title: 'Dashboard', url: '/UserTickets' },
+            { title: 'User Tickets' }
           ]
         }
       },
@@ -92,7 +104,7 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Vendors Detail',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'Vendors Detail' }
           ]
         }
@@ -103,7 +115,7 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Events',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'Events' }
           ]
         }
@@ -114,7 +126,7 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Rewards',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'Rewards' }
           ]
         }
@@ -125,7 +137,7 @@ export const PagesRoutes: Routes = [
         data: {
           title: 'Promo Code',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' }, 
+            { title: 'Dashboard', url: '/dashboard' },
             { title: 'Promo Code' }
           ]
         }
@@ -163,7 +175,7 @@ export const PagesRoutes: Routes = [
           ]
         }
       },
-     
+
       // {
       //   path: 'usersdetail',
       //   component: UsersDetailComponent,
@@ -274,7 +286,7 @@ export const PagesRoutes: Routes = [
           ]
         }
       },
-      
+
       {
         path: 'notification',
         component: NotificationComponent,

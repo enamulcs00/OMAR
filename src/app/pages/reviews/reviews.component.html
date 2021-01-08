@@ -12,27 +12,38 @@
             </form>
           </div>
           <div class="col-md-8 text-right">
-            <button class="btn btn-seconadary mb-2" (click)="addreviewModal(addreview)"><i class="sl-icon-plus"></i> Add
-              User</button>
+            <div ngbDropdown class="d-inline-block">
+              <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Rating</button>
+              <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem class="text-warning"><i class="fas fa-star"></i> <i class="fas fa-star"></i></button>
+                <button ngbDropdownItem class="text-warning"><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> </button>
+                <button ngbDropdownItem class="text-warning"><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i></button>
+                <button ngbDropdownItem class="text-warning"><i class="fas fa-star"></i> <i class="fas fa-star"></i><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>  </button>
+              </div>
+            </div>
           </div>
           <table class="table v-middle product-overview" id="zero_config">
             <thead>
-              <tr>
-                <th>Photo</th>
-                <th>Name</th>
-                <th>Email Id</th>
+              <tr>               
+                <th>Vendor Name</th>
+                <th>Vendor Id</th>
+                <th>User Name</th>
+                <th>User Id</th>               
                 <th>Rating</th>
                 <th>Review</th>
+                <th>Review status</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>
+                <!-- <td>
                   <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                </td>
+                </td> -->
                 <td>Ronny </td>
-                <td>Hannagover@gmail.com </td>
+                <td>Ron33434 </td>
+                <td>Sam </td>
+                <td>Sam33434 </td>               
                 <td>
                   <p class="text-warning mb-0 text-nowrap"> <i class="fas fa-star "> </i> <i class="fas fa-star"> </i>
                     <i class="fas fa-star"> </i> <i class="fas fa-star"> </i> </p>
@@ -40,17 +51,32 @@
                 <td>Lorem ipsum dummy content It is useful for all type site and use for dummy content all type site and
                   use for dummy content all type site and use for dummy content..... <a href="javascript:void(0)"
                     (click)="reviewModal(review)">Read More</a></td>
-                <td>
+                    <td>
+                      <div class="col-md-8 text-right">
+                        <div ngbDropdown class="d-inline-block">
+                          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Enable</button>
+                          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button ngbDropdownItem class="text-primary">Enable</button>
+                            <button ngbDropdownItem class="text-primary">Disable</button>
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </td>    
+                    <td>
                   <button class="btn btn-danger" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
                     Delete</button>
                 </td>
               </tr>
               <tr>
-                <td>
+                <!-- <td>
                   <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                </td>
+                </td> -->
                 <td>Ronny </td>
-                <td>Hannagover@gmail.com </td>
+                <td>Ron33434 </td>
+                <td>Sam </td>
+                <td>Sam33434 </td>    
+                     
                 <td>
                   <p class="text-warning mb-0 text-nowrap"> <i class="fas fa-star "> </i> <i class="fas fa-star"> </i>
                     <i class="fas fa-star"> </i> <i class="fas fa-star"> </i> </p>
@@ -58,17 +84,31 @@
                 <td>Lorem ipsum dummy content It is useful for all type site and use for dummy content all type site and
                   use for dummy content all type site and use for dummy content..... <a href="javascript:void(0)"
                     (click)="reviewModal(review)">Read More</a></td>
-                <td>
+                    <td>
+                      <div class="col-md-8 text-right">
+                        <div ngbDropdown class="d-inline-block">
+                          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Enable</button>
+                          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button ngbDropdownItem class="text-primary">Enable</button>
+                            <button ngbDropdownItem class="text-primary">Disable</button>
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </td>    
+                    <td>
                   <button class="btn btn-danger" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
                     Delete</button>
                 </td>
               </tr>
               <tr>
-                <td>
+                <!-- <td>
                   <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                </td>
+                </td> -->
                 <td>Ronny </td>
-                <td>Hannagover@gmail.com </td>
+                <td>Ron33434 </td>
+                <td>Sam </td>
+                <td>Sam33434 </td>               
                 <td>
                   <p class="text-warning mb-0 text-nowrap"> <i class="fas fa-star "> </i> <i class="fas fa-star"> </i>
                     <i class="fas fa-star"> </i> <i class="fas fa-star"> </i> </p>
@@ -76,11 +116,22 @@
                 <td>Lorem ipsum dummy content It is useful for all type site and use for dummy content all type site and
                   use for dummy content all type site and use for dummy content..... <a href="javascript:void(0)"
                     (click)="reviewModal(review)">Read More</a></td>
+                    <td>
+                      <div class="col-md-8 text-right">
+                        <div ngbDropdown class="d-inline-block">
+                          <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Enable</button>
+                          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                            <button ngbDropdownItem class="text-primary">Enable</button>
+                            <button ngbDropdownItem class="text-primary">Disable</button>
+                          
+                          </div>
+                        </div>
+                      </div>
+                    </td>    
                 <td>
+                  
                   <button class="btn btn-danger" (click)="reviewDeleteModal(reviewDelete)"><i class="ti-trash"></i>
                     Delete</button>
-
-
                 </td>
               </tr>
             </tbody>
