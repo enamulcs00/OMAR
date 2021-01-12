@@ -34,8 +34,10 @@
                     <tr>
                       <th>User Name</th>
                       <th>User ID</th>
+                      <th>Phone No</th>
                       <th>Vendor Name</th>
                       <th>Vendor ID</th>
+                      <th>Order ID</th>                      
                       <th class="nowrap">Total Rented Bike</th>
                       <th class="nowrap">Start Date</th>
                       <th class="nowrap">End Date</th>
@@ -50,18 +52,20 @@
                       <td class="nowrap">John<a href="javascript:void()" (click)="detailprofileModal(detailprofile)"
                           class="mdi mdi-information"></a></td>
                       <td>Joh454333</td>
+                      <td>6676676766</td>
                       <td class="nowrap">Sandy <a href="javascript:void()" (click)="detailprofileModal(detailprofile)"
                           class="mdi mdi-information"></a></td>
+                          <td class="nowrap">#44345454</td>
                       <td>San4543544</td>
                       <td>4 <a href="javascript:void()" (click)="openWindowCustomClass(content3)"
                           class="mdi mdi-information"></a></td>
-                      <td class="nowrap">12-01-2021 </td>
-                      <td class="nowrap"> 16-01-2021</td>
+                      <td class="nowrap">12-01-2021/12:30PM </td>
+                      <td class="nowrap"> 16-01-2021/9:30PM</td>
                       <td class="nowrap"> $10</td>
                       <td>
-                        <div ngbDropdown placement="bottom" class="d-inline-block">
+                        <div ngbDropdown placement="bottom" class="d-inline-block" container="body">
                           <button class="btn btn-outline-secondary " ngbDropdownToggle>Actions</button>
-                          <div ngbDropdownMenu class="pb-5">
+                          <div ngbDropdownMenu class="">
                             <button ngbDropdownItem>Request Sent</button>
                             <button ngbDropdownItem>Vendor Accepted</button>
                             <button ngbDropdownItem>Vendor Rejected</button>
@@ -141,8 +145,10 @@
                     <tr>
                       <th>User Name</th>
                       <th>User ID</th>
+                      <th>Phone No</th>
                       <th>Vendor Name</th>
                       <th>Vendor ID</th>
+                      <th>Order ID</th>
                       <th class="nowrap">Total Rented Bike</th>
                       <th class="nowrap">Start Date</th>
                       <th class="nowrap">End Date</th>
@@ -157,13 +163,15 @@
                       <td class="nowrap">John<a href="javascript:void()" (click)="detailprofileModal(detailprofile)"
                           class="mdi mdi-information"></a></td>
                       <td>Joh454333</td>
+                      <td>6676676766</td>
                       <td class="nowrap">Sandy <a href="javascript:void()" (click)="detailprofileModal(detailprofile)"
                           class="mdi mdi-information"></a></td>
                       <td>San4543544</td>
+                      <td>#3436456</td>
                       <td>4 <a href="javascript:void()" (click)="openWindowCustomClass(content3)"
                           class="mdi mdi-information"></a></td>
-                      <td class="nowrap">12-01-2021 </td>
-                      <td class="nowrap"> 16-01-2021</td>
+                          <td class="nowrap">12-01-2021/12:30PM </td>
+                          <td class="nowrap"> 16-01-2021/9:30PM</td>
                       <td class="nowrap"> $10</td>
                       <td>
                         <div ngbDropdown placement="bottom" class="d-inline-block">
@@ -246,8 +254,11 @@
                     <tr>
                       <th>User Name</th>
                       <th>User ID</th>
+                      <th>Phone No</th>
                       <th>Vendor Name</th>
                       <th>Vendor ID</th>
+                      <th>Order ID</th>
+                      
                       <th class="nowrap">Total Rented Bike</th>
                       <th class="nowrap">Start Date</th>
                       <th class="nowrap">End Date</th>
@@ -262,13 +273,15 @@
                       <td class="nowrap">John<a href="javascript:void()" (click)="detailprofileModal(detailprofile)"
                           class="mdi mdi-information"></a></td>
                       <td>Joh454333</td>
+                      <td>6676676766</td>
                       <td class="nowrap">Sandy <a href="javascript:void()" (click)="detailprofileModal(detailprofile)"
                           class="mdi mdi-information"></a></td>
                       <td>San4543544</td>
+                      <td>#3436456</td>
                       <td>4 <a href="javascript:void()" (click)="openWindowCustomClass(content3)"
                           class="mdi mdi-information"></a></td>
-                      <td class="nowrap">12-01-2021 </td>
-                      <td class="nowrap"> 16-01-2021</td>
+                          <td class="nowrap">12-01-2021/12:30PM </td>
+                          <td class="nowrap"> 16-01-2021/9:30PM</td>
                       <td class="nowrap"> $10</td>
                       <td>
                         <div ngbDropdown placement="bottom" class="d-inline-block">
@@ -500,6 +513,26 @@
             <div class="row ">
               <div class="col-md-6">
                 <div class="form-group">
+                  <label class="control-label">Start Date</label>
+                  <input type="date" id="start_date" class="form-control form-control-danger" Value="Date">
+                  <!-- <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div> -->
+
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group has-danger">
+                  <label class="control-label">End Date</label>
+                  <input type="date" id="Date" class="form-control form-control-danger" value="Date">
+
+                </div>
+              </div>
+              <!--/span-->
+            </div>
+            <!--/row-->
+            <div class="row ">
+              <div class="col-md-6">
+                <div class="form-group">
                   <label class="control-label">Vendor Name</label>
                   <input type="text" id="location" class="form-control form-control-danger" Value="John">
                   <!-- <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div> -->
@@ -516,7 +549,26 @@
               </div>
               <!--/span-->
             </div>
+  <!--/row-->
+  <div class="row ">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label class="control-label">Vendor ID</label>
+        <input type="text" id="location" class="form-control form-control-danger" Value="John4332">
+        <!-- <div class="custom-file"><input  class="custom-file-input" id="inputGroupFile01" type="file"><label  class="custom-file-label" for="inputGroupFile01">Choose file</label></div> -->
 
+      </div>
+    </div>
+    <!--/span-->
+    <div class="col-md-6">
+      <div class="form-group has-danger">
+        <label class="control-label">User ID</label>
+        <input type="text" id="location" class="form-control form-control-danger" value="San43432">
+
+      </div>
+    </div>
+    <!--/span-->
+  </div>
             <!--/row-->
             <div class="row">
               <!--/span-->
@@ -533,7 +585,29 @@
               </div>
               <!--/span-->
             </div>
-
+            <!--/row-->
+            <div class="row">
+              <!--/span-->
+              <div class="col-md-6">
+                <label>Extension Rate</label>
+                <input type="text" value="$ 10" class="form-control form-control-danger" placeholder="Extention Rate">
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Insurence Price</label>
+                  <input type="text" id="vendor" class="form-control form-control-danger" placeholder="Insurence Price">
+                </div>
+              </div>
+              <!--/span-->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label class="control-label">Delivery Price</label>
+                  <input type="text" id="vendor" class="form-control form-control-danger" placeholder="Delivery Price">
+                </div>
+              </div>
+              <!--/span-->
+            </div>
             <!--/row-->
           </div>
 

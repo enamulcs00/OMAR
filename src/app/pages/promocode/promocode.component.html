@@ -253,7 +253,7 @@
     <!-- edit user detail -->
     <ng-template #userDetail let-modal>
       <div class="modal-body ">
-        <div class="card pb-3">
+        <div class="card pt-3">
           <ngb-tabset type="pills">
             <ngb-tab title="Specifc">
               <ng-template ngbTabContent>
@@ -285,7 +285,16 @@
                           <div class="col-md-6">
                             <div class="form-group">
                               <label class="control-label">Vendor Name</label>
-                              <input type="text" id="firstName" class="form-control" placeholder="John doe">
+                              
+                              <input
+                                id="typeahead-focus"
+                                type="text"
+                                class="form-control"                                
+                                [ngbTypeahead]="search"
+                                (focus)="focusId$.next($any($event).target.value)"
+                                (click)="clickId$.next($any($event).target.value)"
+                                #instance="ngbTypeahead"
+                              />
           
                             </div>
                           </div>
@@ -293,9 +302,17 @@
                           <div class="col-md-6">
                             <div class="form-group has-danger">
                               <label class="control-label">Vendor ID</label>
-                              <input type="text" id="event" class="form-control form-control-danger"
-                                placeholder="Event Name">
-          
+                            
+                                <input
+                                id="typeahead-focusID"
+                                type="text"
+                                class="form-control"                                
+                                [ngbTypeahead]="search_id"
+                                (focus)="focus$.next($any($event).target.value)"
+                                (click)="click$.next($any($event).target.value)"
+                                #instance="ngbTypeahead"
+                              />
+                                
                             </div>
                           </div>
                           <!--/span-->
@@ -384,7 +401,8 @@
             </ngb-tab>
             <ngb-tab>
               <ng-template ngbTabTitle>General</ng-template>
-              <ng-template ngbTabContent> <form action="#">
+              <ng-template ngbTabContent> 
+                <form action="#">
                   <div class="form-body">
                       <div class="card-body">
                         <div class="row p-t-20">

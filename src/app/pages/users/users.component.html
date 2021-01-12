@@ -34,12 +34,14 @@
                                 <tr>
                                     <!-- <th>Photo</th> -->
                                     <th>Name</th>
+                                    <th>User ID</th>
                                     <th>Email ID</th>
                                     <th>Gender</th>
                                     <th>Contact</th>
                                     <!-- <th>Bike Name</th> -->
                                     <!-- <th>Bike No</th>-->
                                     <th>Order History</th>
+                                    <th>Reset Password</th>
                                     <th>User Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -49,16 +51,17 @@
                                     <!-- <td>
                     <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
                   </td> -->
-                                    <td><span class="nowrap"> Tony <a routerLink="/pages/usershistory"><span
-                          class="mdi mdi-information-outline"></span></a>
+                                    <td><span class="nowrap"> Tony 
+                                        <!-- <a routerLink="/pages/usershistory"><span
+                          class="mdi mdi-information-outline"></span></a> -->
                                         </span>
                                     </td>
+                                    <td><span class="nowrap"> Ton34343 </span></td>
                                     <td>example@gmail.com</td>
                                     <td>Male</td>
                                     <td><span class="text-nowrap">+91-7858485474</span></td>
                                     <td><a routerLink="../orderhistory" class="btn btn-info">View</a></td>
-                                    <!-- <td><span class="text-nowrap">HR-04-V-2433</span></td>
-                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td> -->
+                                    <td><button class="btn btn-light" (click)="passwordModal(password)">Reset</button></td>
 
                                     <td>
                                         <div class="form-check">
@@ -93,14 +96,18 @@
                                     <!-- <td>
                     <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
                   </td> -->
-                                    <td><span class="nowrap"> Tony <a routerLink="/pages/usershistory"><span
-                          class="mdi mdi-information-outline"></span></a>
+                                    <td><span class="nowrap"> Tony 
+                                        <!-- <a routerLink="/pages/usershistory"><span
+                          class="mdi mdi-information-outline"></span></a> -->
                                         </span>
                                     </td>
+                                    <td><span class="nowrap"> Ton34343 </span></td>
                                     <td>example@gmail.com</td>
                                     <td>Male</td>
                                     <td><span class="text-nowrap">+91-7858485474</span></td>
-                                    <td></td>
+                                    <td>N/A</td>
+                                    <td><button class="btn btn-light" (click)="passwordModal(password)">Reset</button></td>
+                                    
                                     <!-- <td>Pulsar</td> -->
                                     <!-- <td><span class="text-nowrap">HR-04-V-2433</span></td>
                   <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td> -->
@@ -177,6 +184,7 @@
                             <div class="m-t-30 text-center">
                                 <img src="assets/images/users/5.jpg" class="rounded-circle" width="120" />
                                 <h4 class="card-title m-t-10">Hanna Gover</h4>
+                              
                             </div>
                         </div>
                     </div>
@@ -205,8 +213,9 @@
                               Grove Avenue, Clinton</span>
                                                     </li>
 
-
+                                                
                                                 </ul>
+                                                
                                             </div>
                                             <!-- <div class="col-md-6">
                         <ul class="list-block">
@@ -258,7 +267,23 @@
             </div>
         </div>
     </ng-template>
-
+  <!-- delete modal -->
+  <ng-template #password let-modal>
+    <div class="modal-body">
+        <button type="button" class=" close-icon" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <i class="mdi mdi-close"></i></button>
+       <h4>Reset Password</h4>
+        <div class="form-group">
+            <label for="">Password</label>
+            <input type="password" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="">Re-Enter Password</label>
+            <input type="password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
+    </div>
+</ng-template>
     <!-- edit user detail -->
     <ng-template #userDetail let-modal>
         <div class="modal-body">
@@ -326,21 +351,7 @@
                                 <!--/span-->
                             </div>
                             <!--/row-->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Bike Name</label>
-                                        <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
-                                    </div>
-                                </div>
-                                <!--/span-->
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Bike No</label>
-                                        <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
-                                    </div>
-                                </div>
-                                <!--/span-->
+                            <div class="row">                              
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">User Status</label>
@@ -442,20 +453,7 @@
                             </div>
                             <!--/row-->
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Bike Name</label>
-                                        <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
-                                    </div>
-                                </div>
-                                <!--/span-->
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Bike No</label>
-                                        <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
-                                    </div>
-                                </div>
-                                <!--/span-->
+                               
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">User Status</label>

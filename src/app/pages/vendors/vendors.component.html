@@ -92,7 +92,7 @@
                           View
                         </button>
                         <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                            class="ti-marker-alt"></i> Edit</button>
+                            class="ti-marker-alt"></i> Edit Profile</button>
                         <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
                           Delete</button>
                       </div>
@@ -216,6 +216,7 @@
               <div class="m-t-30 text-center">
                 <img src="assets/images/users/2.jpg" class="rounded-circle" width="120" />
                 <h4 class="card-title m-t-10">Ronny</h4>
+               
               </div>
             </div>
           </div>
@@ -234,29 +235,28 @@
                       <div class="col-md-6">
                         <ul class="list-block">
                           <li class="list-block-listing">Name: <span class="font-weight-600">Ronny</span></li>
+                          <li class="list-block-listing">Vendor Id: <span class="font-weight-600">Ron65565</span></li>
                           <li class="list-block-listing">Email: <span class="font-weight-600">ronny@gmail.com</span>
                           </li>
                           <li class="list-block-listing">Gender: <span class="font-weight-600">Female</span>
                           </li>
                           <li class="list-block-listing">Phone No: <span class="font-weight-600">+91-7858485474</span>
                           </li>
-                          <li class="list-block-listing "> <span>Address: </span> <span class="font-weight-600">3750
-                              Grove Avenue, Clinton</span>
-                          </li>
+                         
 
 
                         </ul>
+                        <button class="btn btn-secondary" (click)="addUserModal(addUser)" (click)="modal.dismiss('Cross click')">Edit</button>
                       </div>
                       <div class="col-md-6">
                         <ul class="list-block">
-
-                          <li class="list-block-listing">Total Stock: <span class="font-weight-600">50</span></li>
-                          <li class="list-block-listing">Availble Stock: <span>10 </span></li>
-                          <li class="list-block-listing">Booked Stock: <span>10</span></li>
-                          <li class="list-block-listing">Total Revenue: <span class="font-weight-600">$ 410</span></li>
-                          <li class="list-block-listing">User Request: <span class="font-weight-600">8:40 AM</span></li>
-                          <li class="list-block-listing">Delivery Time: <span class="font-weight-600">9:00 AM</span>
-                          </li>
+                          <li class="list-block-listing "> <span>Address: </span> <span class="font-weight-600">3750
+                            Grove Avenue, Clinton</span>
+                        </li>
+                          <li class="list-block-listing">Account Type: <span class="font-weight-600">Main</span></li>
+                          <li class="list-block-listing">Business Type: <span>Bike </span></li>
+                          <li class="list-block-listing">Commision: <span>$50 </span></li>
+                          
                         </ul>
                       </div>
                     </div>
@@ -396,6 +396,26 @@
                 <!--/span-->
                 <div class="col-md-6">
                   <div class="form-group">
+                    <label class="control-label">Vendor Id </label>
+                    <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Ron#23456">
+                  </div>
+                </div>
+                <!--/span-->
+               
+              </div>
+              <!--/row-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Vendor Id </label>
+                    <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Ron#23456">
+                  </div>
+                </div>
+                <!--/span-->
+               
+                <!--/span-->
+                <div class="col-md-6">
+                  <div class="form-group">
                     <label class="control-label">Gender</label>
                     <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
                       <option value="Category 1">Male</option>
@@ -404,24 +424,31 @@
                   </div>
                 </div>
                 <!--/span-->
-              </div>
-              <!--/row-->
-              <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="control-label">Bike Name</label>
-                    <input type="text" id="bike_name" name="bike_name" class="form-control" placeholder="Bike name">
+                    <label class="control-label">Account Type</label>
+                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                      <option value="Category 1">Main</option>
+                      <option value="Category 2">Sub Profile</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label">Edit Commision</label>
+                    <input type="text" id="Commision" name="Commision" class="form-control" placeholder="$50">
                   </div>
                 </div>
                 <!--/span-->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="control-label">Bike No</label>
-                    <input type="text" id="bike_no" name="bike_no" class="form-control" placeholder="Bike No">
+                    <label class="control-label">Business Type</label>
+                    <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
+                      <option value="Category 1">Bike</option>
+                      <option value="Category 2">Event</option>
+                    </select>
                   </div>
                 </div>
-                <!--/span-->
-
                 <!--/span-->
               </div>
               <!--/row-->

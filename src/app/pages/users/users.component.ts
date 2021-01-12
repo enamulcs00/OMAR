@@ -35,6 +35,10 @@ userDetailModal(userDetail) {
 addUserModal(addUser) {
   this.modalService.open(addUser, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
 }
+passwordModal(password) {
+  this.modalService.open(password, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
+}
+
 private getDismissReason(reason: any): string {
   if (reason === ModalDismissReasons.ESC) {
     return 'by pressing ESC';
