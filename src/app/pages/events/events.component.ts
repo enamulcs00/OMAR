@@ -15,7 +15,10 @@ export class EventsComponent implements OnInit {
   userDeleteModal(userDelete) {
     this.modalService.open(userDelete, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
   }
-
+  userTicketModal(userTicket) {
+    this.modalService.open(userTicket, {backdropClass: 'light-blue-backdrop',centered: true,size: 'sm'});
+  }
+  
   openWindowCustomClass(content3) {
     this.modalService.open(content3, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg'});
   }

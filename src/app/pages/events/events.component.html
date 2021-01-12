@@ -415,25 +415,37 @@
           <td>example@gmail.com</td>
           <td>+91-321324567</td>
           <td>20</td>
-          <td> <a routerLink="../usertickets" class="btn btn-info" (click)="modal.dismiss('Cross click')">View</a></td>
+          <td> <a href="javascript:void()" (click)="userTicketModal(userTicket)" class="mr-2"><i class=" fas fa-edit"></i> </a> <a routerLink="../usertickets"  (click)="modal.dismiss('Cross click')"> <i class="fas fa-eye"></i></a></td>
         </tr>
         <tr>
-          <td>Tonny</td>
-          <td>Ton34343</td>
-          <td>example@gmail.com</td>
-          <td>+91-321324567</td>
-          <td>8</td>
-          <td> <a routerLink="../usertickets" class="btn btn-info" (click)="modal.dismiss('Cross click')">View</a></td>
-        </tr>
-        <tr>
-          <td>Sam</td>
-          <td>Sam34343</td>
-          <td>example@gmail.com</td>
-          <td>+91-321324567</td>
-          <td>12</td>
-          <td> <a routerLink="../usertickets" class="btn btn-info" (click)="modal.dismiss('Cross click')">View</a></td>
-        </tr>
+            <td>Ronny</td>
+            <td>Ron34343</td>
+            <td>example@gmail.com</td>
+            <td>+91-321324567</td>
+            <td>20</td>
+            <td> <a href="javascript:void()" (click)="userTicketModal(userTicket)" class="mr-2"><i class=" fas fa-edit"></i> </a> <a routerLink="../usertickets"  (click)="modal.dismiss('Cross click')"> <i class="fas fa-eye"></i></a></td>
+          </tr>
+          <tr>
+            <td>Ronny</td>
+            <td>Ron34343</td>
+            <td>example@gmail.com</td>
+            <td>+91-321324567</td>
+            <td>20</td>
+            <td> <a href="javascript:void()" (click)="userTicketModal(userTicket)" class="mr-2"><i class=" fas fa-edit"></i> </a> <a routerLink="../usertickets"  (click)="modal.dismiss('Cross click')"> <i class="fas fa-eye"></i></a></td>
+          </tr>
+          
+        
       </table>
     </div>
   </div>
 </ng-template>
+
+<ng-template #userTicket let-modal>
+    <div class="modal-body">
+      <h4>Add Ticket</h4>
+      <div class="form-group">
+     <input type="text" class="form-control" value="" placeholder="Add Tick">
+    </div>
+     <button class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
+    </div>
+  </ng-template>
