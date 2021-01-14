@@ -3,6 +3,7 @@ import { ROUTES } from './menu-items';
 import { RouteInfo } from './sidebar.metadata';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { environment } from '../../../environments/environment'
 declare var $: any;
 
 @Component({
@@ -10,6 +11,8 @@ declare var $: any;
   templateUrl: './sidebar.component.html'
 })
 export class SidebarComponent implements OnInit {
+  imageUrl: String = environment.imageUrl
+  profileData: Object = {}
   showMenu = '';
   showSubMenu = '';
   public sidebarnavItems: any[];
@@ -37,6 +40,9 @@ export class SidebarComponent implements OnInit {
 
   // End open close
   ngOnInit() {
+    if(localStorage.getItem('tamshiyah_admin')) {
+      this.profileData = JSON.parse(localStorage.getItem('tamshiyah_admin'))
+    }
     this.sidebarnavItems = ROUTES.filter(sidebarnavItem => sidebarnavItem);
   }
 }

@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete'
 
 import { PagesRoutes } from './pages.routing';
 import { HelperclassesComponent } from './helper-classes/hc.component';
@@ -37,12 +38,13 @@ import { UserhistoryComponent } from './userhistory/userhistory.component';
 import { PromocodeComponent } from './promocode/promocode.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { UserticketsComponent } from './usertickets/usertickets.component';
+import { TranslateModule } from '@ngx-translate/core'
 
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
 @NgModule({
   imports: [
-CommonModule,
+    CommonModule,
     RouterModule.forChild(PagesRoutes),
     FormsModule,
     ReactiveFormsModule,
@@ -51,14 +53,15 @@ CommonModule,
     ChartsModule,
     ChartistModule,
     NgxChartsModule,
-    NgxDatatableModule
-  
+    NgxDatatableModule,
+    GooglePlaceModule,
+    TranslateModule
   ],
   declarations: [
     HelperclassesComponent,
-   
+
     InvoiceComponent,
-    ProfileComponent,   
+    ProfileComponent,
     UsersComponent,
     BikesComponent,
     ToursComponent,
@@ -83,4 +86,4 @@ CommonModule,
     UserticketsComponent
   ]
 })
-export class PagesModule {}
+export class PagesModule { }

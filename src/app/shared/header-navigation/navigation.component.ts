@@ -1,4 +1,7 @@
-import { Component, AfterViewInit, EventEmitter, Output } from '@angular/core';
+import { Component, AfterViewInit, EventEmitter, Output, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
+import { NgxSpinnerService } from 'ngx-spinner'
+import { environment } from '../../../environments/environment'
 import {
   NgbModal,
   ModalDismissReasons,
@@ -13,14 +16,20 @@ declare var $: any;
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements AfterViewInit {
+export class NavigationComponent implements AfterViewInit, OnInit {
   @Output() toggleSidebar = new EventEmitter<void>();
+  profileData: Object = {}
+  imageUrl: String = environment.imageUrl
 
   public config: PerfectScrollbarConfigInterface = {};
 
   public showSearch = false;
   public element1: any;
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    private router: Router,
+    private spinner: NgxSpinnerService,
+  ) {}
 
   // This is for Notifications
   notifications: Object[] = [
@@ -89,6 +98,13 @@ export class NavigationComponent implements AfterViewInit {
     this.modalService.open(addBike, {backdropClass: 'light-blue-backdrop',centered: true,size: 'lg',backdrop:"static"});
   }
 
+  ngOnInit() {
+    if(localStorage.getItem('tamshiyah_admin')) {
+      this.profileData = JSON.parse(localStorage.getItem('tamshiyah_admin'))
+    }
+
+  }
+
   ngAfterViewInit() {}
    openBox() {
     let element = document.getElementById("notification");    
@@ -99,4 +115,14 @@ export class NavigationComponent implements AfterViewInit {
     let element1 = document.getElementById("arrow-close").parentElement;
     element1.classList.remove("sidebar_slide");
   }
+
+  logout() {
+    this.spinner.show()
+    localStorage.removeItem('tamshiyah_admin')
+    setTimeout( () => {
+      this.router.navigate(['login'])
+      this.spinner.hide()
+    }, 1500)
+  }
+
 }

@@ -7,12 +7,13 @@ import {
 } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule } from '@agm/core';
 import { ToastrModule } from 'ngx-toastr';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 import { FullComponent } from './layouts/full/full.component';
 import { BlankComponent } from './layouts/blank/blank.component';
@@ -31,6 +32,10 @@ import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 
+import { GetInterceptorService } from './services/get-interceptor/get-interceptor.service'
+import { SetInterceptorService } from './services/set-interceptor/set-interceptor.service'
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     suppressScrollX: true,
@@ -47,7 +52,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         BlankComponent,
         NavigationComponent,
         BreadcrumbComponent,
-        SidebarComponent       
+        SidebarComponent
     ],
     imports: [
         CommonModule,
@@ -62,9 +67,20 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
         Ng2SearchPipeModule,
         NgMultiSelectDropDownModule.forRoot(),
         AgmCoreModule.forRoot({ apiKey: 'AIzaSyBUb3jDWJQ28vDJhuQZxkC0NXr_zycm8D0' }),
-        DragDropModule
+        DragDropModule,
+        NgxSpinnerModule,
+        TranslateModule.forRoot({
+            defaultLanguage: 'en',
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient]
+            }
+        })
     ],
     providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: SetInterceptorService, multi: true },
+        { provide: HTTP_INTERCEPTORS, useClass: GetInterceptorService, multi: true },
         {
             provide: PERFECT_SCROLLBAR_CONFIG,
             useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
@@ -77,3 +93,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+export function HttpLoaderFactory(httpClient: HttpClient) {
+    return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
+}
