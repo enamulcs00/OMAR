@@ -17,8 +17,9 @@ export class UsersComponent implements OnInit {
   UserList:any;
   totalItems:any;
   currentPage:number = 1;
-  
+
   itemPerPage:number = 10;
+  status: number;
   constructor(private spinner: NgxSpinnerService, private modalService: NgbModal,public service:PagesService,private toaster: ToastrService) {}
 
   ngOnInit(): void {
@@ -65,15 +66,16 @@ private getDismissReason(reason: any): string {
 }
 getUserDetails(){
   this.spinner.show()
+  // let url = `/getusers?status=${(this.status?('?status=' + this.status) : '')+(this.searchForm.value.search ? ('&name=' + this.searchForm.value.search) : '')}`
   let url = '/getusers'
 this.service.getApi(url).subscribe((res:any)=>{
   console.log('Get User Len',res.data.users.length)
-  
+
   this.spinner.hide()
   if (res['success']) {
     this.UserList = res.data.users
     this.totalItems = res.data.users.length
-  
+
   } else {
     this.totalItems = ''
     this.toaster.error(res['message'])
@@ -91,6 +93,21 @@ pagination(event) {
 searchFormSubmit() {
   if (this.searchForm.value.search) {
     this.getUserDetails()
+  }
+}
+Activate(){
+  this.status = 1;
+}
+DeActivate(){
+  this.status = 0;
+}
+AddUser(){
+  let url = `/addUser`
+  let obj = {
+    fullName:'',
+    countryCode:'',
+    phone:'',
+    email:''
   }
 }
 }

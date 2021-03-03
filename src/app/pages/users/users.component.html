@@ -12,7 +12,7 @@
                             <div class="mb-2">
                                 <input type="text" class="form-control" (keyup)="searchFormSubmit()" id="prenametext" placeholder="Search" formControlName="search">
                             </div>
-                            
+
                         </form>
                     </div>
                     <div class="col-md-8  d-flex justify-content-end">
@@ -21,8 +21,8 @@
                                 Status
                             </button>
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                <button class="dropdown-item">Active</button>
-                                <button class="dropdown-item">Inactive</button>
+                                <button class="dropdown-item" (click)="Activate()">Active</button>
+                                <button class="dropdown-item" (click)="DeActivate()">Inactive</button>
                             </div>
                         </div>
                         <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export
@@ -455,7 +455,7 @@
                         <div class="form-actions">
                             <div class="card-body">
                                 <button type="submit" class="btn btn-success mr-3"
-                                    (click)="modal.dismiss('Cross click')">
+                                    (click)="AddUser()">         <!--  (click)="modal.dismiss('Cross click')" -->
                                     <i class="fa fa-check"></i> Add</button>
                                 <button type="button" class="btn btn-dark"
                                     (click)="modal.dismiss('Cross click')">Cancel</button>
