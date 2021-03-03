@@ -39,6 +39,7 @@ import { PromocodeComponent } from './promocode/promocode.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { UserticketsComponent } from './usertickets/usertickets.component';
 import { TranslateModule } from '@ngx-translate/core'
+import { NgxPaginationModule } from 'ngx-pagination';
 
 // import { UsersDetailComponent } from './users-detail/users-detail.component';
 
@@ -55,6 +56,8 @@ import { TranslateModule } from '@ngx-translate/core'
     NgxChartsModule,
     NgxDatatableModule,
     GooglePlaceModule,
+    NgxPaginationModule,
+    
     TranslateModule
   ],
   declarations: [

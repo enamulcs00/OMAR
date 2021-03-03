@@ -25,4 +25,6 @@ export class UrlService {
   destinations = `${this.baseUrl}/destinations`
   hotels = `${this.baseUrl}/hotels`
   tours = `${this.baseUrl}/tours`
+  // Sprint-2--Started
+  users = `${this.baseUrl}/users`
 }

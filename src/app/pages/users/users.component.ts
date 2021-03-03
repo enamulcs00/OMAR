@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { PagesService } from '../pages.service';
 
 @Component({
   selector: 'app-users',
@@ -8,9 +11,15 @@ import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-
 })
 export class UsersComponent implements OnInit {
   closeResult: string;
-  constructor(private modalService: NgbModal) {}
+  UserList:any;
+  totalItems:any;
+  currentPage:number = 1;
+  
+  itemPerPage:number = 10;
+  constructor(private spinner: NgxSpinnerService, private modalService: NgbModal,public service:PagesService,private toaster: ToastrService) {}
 
   ngOnInit(): void {
+    this.getUserDetails()
   }
 // This is for the first modal
 open1(content1) {
@@ -48,4 +57,30 @@ private getDismissReason(reason: any): string {
     return  `with: ${reason}`;
   }
 }
+getUserDetails(){
+  this.spinner.show()
+  let url = '/getusers'
+this.service.getApi(url).subscribe((res:any)=>{
+  console.log('Get User Len',res.data.users.length)
+  
+  this.spinner.hide()
+  if (res['success']) {
+    this.UserList = res.data.users
+    this.totalItems = res.data.users.length
+  
+  } else {
+    this.totalItems = ''
+    this.toaster.error(res['message'])
+  }
+}, error => {
+  this.toaster.error(error['message'])
+  this.spinner.hide()
+})
 }
+pagination(event) {
+  console.log('This event will display page number:->',event);
+  this.currentPage = event;
+  this.getUserDetails()
+}
+}
+

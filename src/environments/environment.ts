@@ -4,8 +4,9 @@
 
 export const environment = {
   production: false,
-  baseUrl: `http://13.233.12.201:3013/api/admin`,
-  imageUrl: `http://13.233.12.201:3013`,
+  baseUrl: `http://15.207.74.128:3013/api/admin`,
+  
+  imageUrl: `http://15.207.74.128:3013`,
 };
 
 /*

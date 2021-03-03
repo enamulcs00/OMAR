@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { UrlService } from '../services/url.service'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PagesService {
+  baseUrl: String = environment.baseUrl
+  
   constructor(
     private urls: UrlService,
     private http: HttpClient
@@ -22,4 +25,12 @@ export class PagesService {
   updateProfile(body) {
     return this.http.put(this.urls.editProfile, body)
   }
+  postApi(endPointURL,body){
+     return this.http.post(this.baseUrl + endPointURL, body)
+
+  }
+  getApi(endPointURL){
+    return this.http.get(this.baseUrl + endPointURL)
+
+ }
 }

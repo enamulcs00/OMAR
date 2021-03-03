@@ -61,7 +61,8 @@ export class Login2Component implements OnInit{
       email: this.loginForm.value.email,
       password: this.loginForm.value.password,
     }
-    this.authService.login(data).subscribe(response =>{
+    this.authService.login(data).subscribe((response:any) =>{
+      console.log('This is login response',response)
       if(response['success']) {
         localStorage.setItem('tamshiyah_admin', JSON.stringify(response['data']))
         if(this.loginForm.value.rememberMe) {

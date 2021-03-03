@@ -17,16 +17,18 @@
                     <div class="col-md-8  d-flex justify-content-end">
                         <div ngbDropdown class="d-inline-block mb-2 mr-2">
                             <button class="btn btn-info text-white" id="dropdownBasic1" ngbDropdownToggle>
-                Status
-              </button>
+                                Status
+                            </button>
                             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
                                 <button class="dropdown-item">Active</button>
                                 <button class="dropdown-item">Inactive</button>
                             </div>
                         </div>
-                        <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export CSV</button>
-                        <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i class="sl-icon-plus"></i> Add
-              User</button>
+                        <button class="btn btn-primary mb-2 mr-2"><i class="sl-icon-cloud-download"></i> Export
+                            CSV</button>
+                        <button class="btn btn-seconadary mb-2" (click)="addUserModal(addUser)"><i
+                                class="sl-icon-plus"></i> Add
+                            User</button>
                     </div>
                     <div class="table-responsive">
                         <table class="table v-middle product-overview" id="zero_config">
@@ -47,102 +49,55 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr *ngFor="let items of UserList | paginate : {itemsPerPage:itemPerPage, currentPage:currentPage, totalItems:totalItems}; let i=index">
                                     <!-- <td>
                     <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
                   </td> -->
-                                    <td><span class="nowrap"> Tony 
-                                        <!-- <a routerLink="/pages/usershistory"><span
-                          class="mdi mdi-information-outline"></span></a> -->
+                                    <td><span class="nowrap">
+                                            {{items?.firstName + ' ' + items?.lastName||'N/A'}}
                                         </span>
                                     </td>
-                                    <td><span class="nowrap"> Ton34343 </span></td>
-                                    <td>example@gmail.com</td>
-                                    <td>Male</td>
-                                    <td><span class="text-nowrap">+91-7858485474</span></td>
+                                    <td><span class="nowrap">{{items?.userName||'N/A'}}</span></td>
+                                    <td>{{items?.email||'N/A'}}</td>
+                                    <td>{{items?.gender||'N/A'}}</td>
+                                    <td><span
+                                            class="text-nowrap">{{items?.countryCode||'N/A'}}-{{items?.phone||'N/A'}}</span>
+                                    </td>
                                     <td><a routerLink="../orderhistory" class="btn btn-info">View</a></td>
-                                    <td><button class="btn btn-light" (click)="passwordModal(password)">Reset</button></td>
-
+                                    <td><button class="btn btn-light" (click)="passwordModal(password)">Reset</button>
+                                    </td>
                                     <td>
-                                        <div class="form-check">
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" disabled>
-                                                <label class="custom-control-label" for="customControlValidation2">Inactive</label>
-                                            </div>
-                                        </div>
+                                    <i class="fa fa-circle" aria-hidden="true" [ngClass]="[ (items?.status==1)? 'text-success' : 'text-danger']" [title]="(items?.status==1)?'Active':'Inactive'"></i>
                                     </td>
                                     <td>
                                         <div ngbDropdown placement="bottom" class="d-inline-block">
-                                            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                        Action
-                      </button>
+                                            <button class="btn btn-outline-primary" id="dropdownBasic1"
+                                                ngbDropdownToggle>
+                                                Action
+                                            </button>
 
                                             <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
-                                                <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i>
-                          View
-                        </button>
-                                                <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                            class="ti-marker-alt"></i> Edit</button>
+                                                <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i
+                                                        class="ti-eye"></i>
+                                                    View
+                                                </button>
+                                                <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i
+                                                        _ngcontent-axh-c146="" class="ti-marker-alt"></i> Edit</button>
 
                                                 <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
-                          Delete</button>
+                                                    Delete</button>
                                             </div>
                                         </div>
-
-
                                     </td>
                                 </tr>
-                                <tr>
-                                    <!-- <td>
-                    <img src="assets/images/users/2.jpg" alt="iMac" width="60" class="rounded-circle">
-                  </td> -->
-                                    <td><span class="nowrap"> Tony 
-                                        <!-- <a routerLink="/pages/usershistory"><span
-                          class="mdi mdi-information-outline"></span></a> -->
-                                        </span>
-                                    </td>
-                                    <td><span class="nowrap"> Ton34343 </span></td>
-                                    <td>example@gmail.com</td>
-                                    <td>Male</td>
-                                    <td><span class="text-nowrap">+91-7858485474</span></td>
-                                    <td>N/A</td>
-                                    <td><button class="btn btn-light" (click)="passwordModal(password)">Reset</button></td>
-                                    
-                                    <!-- <td>Pulsar</td> -->
-                                    <!-- <td><span class="text-nowrap">HR-04-V-2433</span></td>
-                  <td><span class="text-nowrap">3750 Grove Avenue,</span> Clinton</td> -->
-
-                                    <td>
-                                        <div class="form-check">
-                                            <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="customControlValidation2" name="radio-stacked" disabled>
-                                                <label class="custom-control-label" for="customControlValidation2">Inactive</label>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div ngbDropdown placement="bottom" class="d-inline-block">
-                                            <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
-                        Action
-                      </button>
-
-                                            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class=" pb-5">
-                                                <button class="dropdown-item" (click)="userprofileModal(userprofile)"><i class="ti-eye"></i>
-                          View
-                        </button>
-                                                <button class="dropdown-item" (click)="userDetailModal(userDetail)"><i _ngcontent-axh-c146=""
-                            class="ti-marker-alt"></i> Edit</button>
-
-                                                <button class="dropdown-item" (click)="userDeleteModal(userDelete)"><i class="ti-trash"></i>
-                          Delete</button>
-                                            </div>
-                                        </div>
-
-
-                                    </td>
+                                <tr *ngIf="totalItems==0">
+                                    <td class="table-no-record" colspan="9">No Record Found</td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div class="custom-pagination mt-2 text-align-end" *ngIf="totalItems>itemPerPage">
+                            <pagination-controls (pageChange)="pagination($event)"></pagination-controls>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -154,8 +109,8 @@
         <div class="modal-header p-2">
             <h4 class="modal-title">Driving Licence</h4>
             <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
         <div class="modal-body">
             <div class="row">
@@ -174,8 +129,8 @@
     <ng-template #userprofile let-modal>
         <div class="modal-body">
             <button type="button" class=" close-icon" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <i class="mdi mdi-close"></i>
-      </button>
+                <i class="mdi mdi-close"></i>
+            </button>
             <div class="row">
                 <!-- Column -->
                 <div class="col-lg-3 col-xlg-3 col-md-5">
@@ -184,7 +139,7 @@
                             <div class="m-t-30 text-center">
                                 <img src="assets/images/users/5.jpg" class="rounded-circle" width="120" />
                                 <h4 class="card-title m-t-10">Hanna Gover</h4>
-                              
+
                             </div>
                         </div>
                     </div>
@@ -202,20 +157,25 @@
                                         <div class="row pt-2">
                                             <div class="col-md-6">
                                                 <ul class="list-block">
-                                                    <li class="list-block-listing">Name: <span class="font-weight-600">Hanna Gover</span></li>
-                                                    <li class="list-block-listing">Email: <span class="font-weight-600">Hannagover@gmail.com</span>
+                                                    <li class="list-block-listing">Name: <span
+                                                            class="font-weight-600">Hanna Gover</span></li>
+                                                    <li class="list-block-listing">Email: <span
+                                                            class="font-weight-600">Hannagover@gmail.com</span>
                                                     </li>
-                                                    <li class="list-block-listing">Gender: <span class="font-weight-600">Female</span>
+                                                    <li class="list-block-listing">Gender: <span
+                                                            class="font-weight-600">Female</span>
                                                     </li>
-                                                    <li class="list-block-listing">Phone No: <span class="font-weight-600">+91-7858485474</span>
+                                                    <li class="list-block-listing">Phone No: <span
+                                                            class="font-weight-600">+91-7858485474</span>
                                                     </li>
-                                                    <li class="list-block-listing "> <span>Address: </span> <span class="font-weight-600">3750
-                              Grove Avenue, Clinton</span>
+                                                    <li class="list-block-listing "> <span>Address: </span> <span
+                                                            class="font-weight-600">3750
+                                                            Grove Avenue, Clinton</span>
                                                     </li>
 
-                                                
+
                                                 </ul>
-                                                
+
                                             </div>
                                             <!-- <div class="col-md-6">
                         <ul class="list-block">
@@ -262,28 +222,30 @@
         <div class="modal-body">
             <p>Are You Sure want to delete this user?</p>
             <div class="btn-group">
-                <button type="button" class="btn btn-primary mr-2" aria-label="Close" (click)="modal.dismiss('Cross click')">Yes</button>
-                <button type="button" class="btn btn-seconadary" aria-label="Close" (click)="modal.dismiss('Cross click')">No</button>
+                <button type="button" class="btn btn-primary mr-2" aria-label="Close"
+                    (click)="modal.dismiss('Cross click')">Yes</button>
+                <button type="button" class="btn btn-seconadary" aria-label="Close"
+                    (click)="modal.dismiss('Cross click')">No</button>
             </div>
         </div>
     </ng-template>
-  <!-- delete modal -->
-  <ng-template #password let-modal>
-    <div class="modal-body">
-        <button type="button" class=" close-icon" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <i class="mdi mdi-close"></i></button>
-       <h4>Reset Password</h4>
-        <div class="form-group">
-            <label for="">Password</label>
-            <input type="password" class="form-control">
+    <!-- delete modal -->
+    <ng-template #password let-modal>
+        <div class="modal-body">
+            <button type="button" class=" close-icon" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <i class="mdi mdi-close"></i></button>
+            <h4>Reset Password</h4>
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="">Re-Enter Password</label>
+                <input type="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
         </div>
-        <div class="form-group">
-            <label for="">Re-Enter Password</label>
-            <input type="password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-primary" (click)="modal.dismiss('Cross click')">Submit</button>
-    </div>
-</ng-template>
+    </ng-template>
     <!-- edit user detail -->
     <ng-template #userDetail let-modal>
         <div class="modal-body">
@@ -304,7 +266,9 @@
                                     <div class="form-group has-success">
                                         <div class="form-group">
                                             <label class="control-label">Upload User Profile</label>
-                                            <div class="custom-file"><input class="custom-file-input" id="inputGroupFile01" type="file"><label class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
+                                            <div class="custom-file"><input class="custom-file-input"
+                                                    id="inputGroupFile01" type="file"><label class="custom-file-label"
+                                                    for="inputGroupFile01">Choose file</label></div>
                                         </div>
                                     </div>
                                 </div>
@@ -323,7 +287,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group has-danger">
                                         <label class="control-label">Email</label>
-                                        <input type="email" id="email" class="form-control form-control-danger" placeholder="example@gmail.com">
+                                        <input type="email" id="email" class="form-control form-control-danger"
+                                            placeholder="example@gmail.com">
 
                                     </div>
                                 </div>
@@ -334,7 +299,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group has-danger">
                                         <label class="control-label">Address</label>
-                                        <input type="text" id="Address" class="form-control form-control-danger" placeholder="Address">
+                                        <input type="text" id="Address" class="form-control form-control-danger"
+                                            placeholder="Address">
 
                                     </div>
                                 </div>
@@ -342,25 +308,28 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Gender</label>
-                                        <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
-                      <option value="Category 1">Male</option>
-                      <option value="Category 2">Female</option>
-                    </select>
+                                        <select class="form-control custom-select" data-placeholder="Choose a Category"
+                                            tabindex="1">
+                                            <option value="Category 1">Male</option>
+                                            <option value="Category 2">Female</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <!--/span-->
                             </div>
                             <!--/row-->
-                            <div class="row">                              
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">User Status</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                class="custom-control-input">
                                             <label class="custom-control-label" for="customRadio1">Active</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                class="custom-control-input">
                                             <label class="custom-control-label" for="customRadio2">Inactive</label>
                                         </div>
                                     </div>
@@ -373,9 +342,11 @@
 
                         <div class="form-actions">
                             <div class="card-body">
-                                <button type="submit" class="btn btn-success mr-3" (click)="modal.dismiss('Cross click')">
-                  <i class="fa fa-check"></i> Update</button>
-                                <button type="button" class="btn btn-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
+                                <button type="submit" class="btn btn-success mr-3"
+                                    (click)="modal.dismiss('Cross click')">
+                                    <i class="fa fa-check"></i> Update</button>
+                                <button type="button" class="btn btn-dark"
+                                    (click)="modal.dismiss('Cross click')">Cancel</button>
                             </div>
                         </div>
                     </div>
@@ -405,7 +376,9 @@
                                     <div class="form-group has-success">
                                         <div class="form-group">
                                             <label class="control-label">Upload User Profile</label>
-                                            <div class="custom-file"><input class="custom-file-input" id="inputGroupFile01" type="file"><label class="custom-file-label" for="inputGroupFile01">Choose file</label></div>
+                                            <div class="custom-file"><input class="custom-file-input"
+                                                    id="inputGroupFile01" type="file"><label class="custom-file-label"
+                                                    for="inputGroupFile01">Choose file</label></div>
                                         </div>
                                     </div>
                                 </div>
@@ -424,7 +397,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group has-danger">
                                         <label class="control-label">Email</label>
-                                        <input type="email" id="email" class="form-control form-control-danger" placeholder="example@gmail.com">
+                                        <input type="email" id="email" class="form-control form-control-danger"
+                                            placeholder="example@gmail.com">
 
                                     </div>
                                 </div>
@@ -435,7 +409,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group has-danger">
                                         <label class="control-label">Address</label>
-                                        <input type="text" id="Address" class="form-control form-control-danger" placeholder="Address">
+                                        <input type="text" id="Address" class="form-control form-control-danger"
+                                            placeholder="Address">
 
                                     </div>
                                 </div>
@@ -443,26 +418,29 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">Gender</label>
-                                        <select class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
-                      <option value="Category 1">Male</option>
-                      <option value="Category 2">Female</option>
-                    </select>
+                                        <select class="form-control custom-select" data-placeholder="Choose a Category"
+                                            tabindex="1">
+                                            <option value="Category 1">Male</option>
+                                            <option value="Category 2">Female</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <!--/span-->
                             </div>
                             <!--/row-->
                             <div class="row">
-                               
+
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="control-label">User Status</label>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="customRadio1" name="customRadio"
+                                                class="custom-control-input">
                                             <label class="custom-control-label" for="customRadio1">Active</label>
                                         </div>
                                         <div class="custom-control custom-radio">
-                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                            <input type="radio" id="customRadio2" name="customRadio"
+                                                class="custom-control-input">
                                             <label class="custom-control-label" for="customRadio2">Inactive</label>
                                         </div>
                                     </div>
@@ -475,9 +453,11 @@
 
                         <div class="form-actions">
                             <div class="card-body">
-                                <button type="submit" class="btn btn-success mr-3" (click)="modal.dismiss('Cross click')">
-                  <i class="fa fa-check"></i> Add</button>
-                                <button type="button" class="btn btn-dark" (click)="modal.dismiss('Cross click')">Cancel</button>
+                                <button type="submit" class="btn btn-success mr-3"
+                                    (click)="modal.dismiss('Cross click')">
+                                    <i class="fa fa-check"></i> Add</button>
+                                <button type="button" class="btn btn-dark"
+                                    (click)="modal.dismiss('Cross click')">Cancel</button>
                             </div>
                         </div>
                     </div>
