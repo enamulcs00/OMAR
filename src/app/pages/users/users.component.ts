@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { NgbModal, ModalDismissReasons, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ToastrService } from 'ngx-toastr';
@@ -11,6 +13,7 @@ import { PagesService } from '../pages.service';
 })
 export class UsersComponent implements OnInit {
   closeResult: string;
+  searchForm:FormGroup
   UserList:any;
   totalItems:any;
   currentPage:number = 1;
@@ -19,7 +22,10 @@ export class UsersComponent implements OnInit {
   constructor(private spinner: NgxSpinnerService, private modalService: NgbModal,public service:PagesService,private toaster: ToastrService) {}
 
   ngOnInit(): void {
-    this.getUserDetails()
+    this.searchForm = new FormGroup({
+      search: new FormControl('')
+    })
+       this.getUserDetails()
   }
 // This is for the first modal
 open1(content1) {
@@ -81,6 +87,11 @@ pagination(event) {
   console.log('This event will display page number:->',event);
   this.currentPage = event;
   this.getUserDetails()
+}
+searchFormSubmit() {
+  if (this.searchForm.value.search) {
+    this.getUserDetails()
+  }
 }
 }
 
